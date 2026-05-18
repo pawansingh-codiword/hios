@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-50;
+  }
+}
+
+@layer components {
+  .futuristic-bg-container {
+    @apply relative bg-slate-950 min-h-screen;
+    background: radial-gradient(circle at 50% 50%, #020617 0%, #000 100%);
+  }
+
+  .futuristic-bg-fixed {
+    @apply fixed inset-0 pointer-events-none overflow-hidden z-0;
+  }
+
+  .glow-blue {
+    @apply absolute -top-[10%] -left-[10%] w-[60%] h-[60%] rounded-full opacity-20 blur-[120px];
+    background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+  }
+
+  .glow-cyan {
+    @apply absolute -bottom-[10%] -right-[10%] w-[60%] h-[60%] rounded-full opacity-20 blur-[120px];
+    background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+  }
+
+  .ring-animated {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-blue-500/10 rounded-full;
+    animation: pulse-ring 15s linear infinite;
+  }
+
+  .ring-outer {
+    @apply w-[80vw] h-[80vw] max-w-[1200px] max-h-[1200px];
+  }
+
+  .ring-inner {
+    @apply w-[50vw] h-[50vw] max-w-[800px] max-h-[800px];
+    animation-duration: 25s;
+    animation-direction: reverse;
+  }
+
+  @keyframes pulse-ring {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .heading-serif {
+    @apply font-serif;
+  }
+}
