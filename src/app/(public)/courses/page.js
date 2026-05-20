@@ -1,10 +1,11 @@
 "use client";
 
-import { courses } from "@/lib/data/courses";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Search, Filter, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -14,143 +15,383 @@ const fadeInUp = {
 
 const staggerContainer = {
   animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.06 },
   },
 };
 
+const filters = ["ALL", "MASTER", "MEDIUM", "BEGINNER", "EARLY ENTHUSIAST"];
+
+const courseList = [
+  {
+    id: "tarot-reading",
+    title: "Tarot Reading",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    description:
+      "Tarot Card Reading helps you to discover deep insightful readings.",
+  },
+  {
+    id: "palmistry",
+    title: "Palmistry",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    description:
+      "Palmistry is the art of reading lines and patterns on the palm to reveal personality and destiny.",
+  },
+  {
+    id: "vedic-astrology",
+    title: "Vedic Astrology",
+    level: "MASTER",
+    tag: "DIPLOMA",
+    description:
+      "Navagrahas and planetary positions create destiny — decode the cosmic blueprint.",
+  },
+  {
+    id: "lal-kitab-astrology",
+    title: "Lal Kitab Astrology",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    description:
+      "Discover unique astrological remedies and predictions rooted in Lal Kitab tradition.",
+  },
+  {
+    id: "kp-astrology",
+    title: "KP Astrology",
+    level: "MASTER",
+    tag: "DIPLOMA",
+    description:
+      "Krishnamurti Paddhati offers a precise system for event-based prediction.",
+  },
+  {
+    id: "vastu-shastra",
+    title: "Vastu Shastra",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    description:
+      "Align your spaces with the five elements for harmony, health, and prosperity.",
+  },
+  {
+    id: "vedic-numerology",
+    title: "Vedic Numerology",
+    level: "BEGINNER",
+    tag: "DIPLOMA",
+    description:
+      "Reveal the science of numbers and how they shape personal destiny.",
+  },
+  {
+    id: "lo-shu-numerology",
+    title: "Lo Shu Numerology",
+    level: "BEGINNER",
+    tag: "DIPLOMA",
+    description:
+      "The 3×3 grid that decodes karmic patterns and life strengths.",
+  },
+  {
+    id: "reiki-healing",
+    title: "Reiki Healing",
+    level: "BEGINNER",
+    tag: "DIPLOMA",
+    description:
+      "Channel universal energy through your hands for healing and balance.",
+  },
+  {
+    id: "spell-casting-healing",
+    title: "Spell Casting & Healing",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    description:
+      "Sacred rituals and intention-based healing from ancient traditions.",
+  },
+  {
+    id: "crystal-healing",
+    title: "Crystal Healing",
+    level: "BEGINNER",
+    tag: "DIPLOMA",
+    description:
+      "Use crystals and gemstones to restore vibrational balance and clarity.",
+  },
+  {
+    id: "sound-healing",
+    title: "Sound Healing",
+    level: "BEGINNER",
+    tag: "DIPLOMA",
+    description:
+      "Tune the body and mind with vibration, mantra, and singing bowls.",
+  },
+  {
+    id: "akashic-records",
+    title: "Akashic Records",
+    level: "MASTER",
+    tag: "DIPLOMA",
+    description:
+      "Access the cosmic library of your soul's journey across lifetimes.",
+  },
+  {
+    id: "past-life-regression",
+    title: "Past Life Regression",
+    level: "MASTER",
+    tag: "DIPLOMA",
+    description:
+      "Guided journey into past lives to heal patterns in this lifetime.",
+  },
+  {
+    id: "hypnosis",
+    title: "Hypnosis",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    description:
+      "Harness the subconscious mind to change beliefs and behaviours.",
+  },
+];
+
 export default function CoursesPage() {
+  const [activeFilter, setActiveFilter] = useState("ALL");
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    country: "",
+    state: "",
+    message: "",
+  });
+
+  const filteredCourses =
+    activeFilter === "ALL"
+      ? courseList
+      : courseList.filter((c) => c.level === activeFilter);
+
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Course details requested:", form);
+  };
+
   return (
-    <div className="flex flex-col min-h-screen selection:bg-blue-500 selection:text-white pb-30">
-      <div className="container px-4 md:px-6 relative z-10 pt-8 md:pt-14">
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-          className="text-center max-w-3xl mx-auto mb-16 space-y-4"
-        >
-          <motion.h1
-            variants={fadeInUp}
-            className="text-4xl md:text-5xl heading-serif bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-300"
-          >
-            Knowledge Network
-          </motion.h1>
-          <motion.p variants={fadeInUp} className="text-blue-200/70 text-lg">
-            Select a node to begin your data ingestion.
-          </motion.p>
+    <div className="flex flex-col min-h-screen selection:bg-amber-500 selection:text-slate-950 pb-24">
+      {/* Header banner */}
+      <section className="relative pt-10 pb-8 border-b border-amber-500/15">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <p className="text-xs md:text-sm tracking-[0.3em] text-amber-300/80 uppercase mb-3">
+            World&apos;s No. 1 Occult Science Institute
+          </p>
+          <h1 className="heading-serif text-3xl md:text-5xl text-white">
+            Courses Offered by{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400">
+              Hamsa Institute of Occult Science
+            </span>
+          </h1>
+        </div>
+      </section>
 
-          {/* Search/Filter Bar */}
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center
-             gap-3 max-w-md mx-auto mt-6 sm:mt-8 px-4 sm:px-0"
-          >
-            <div className="search-container flex items-center w-full relative">
-              <Search className="search-icon absolute left-3 w-4 h-4 text-blue-300/70" />
-              <input
-                type="text"
-                placeholder="Search modules..."
-                className="search-input w-full pl-10 pr-4 py-2.5
-                 rounded-xl bg-white/5 border border-blue-500/20
-                 text-blue-100 placeholder-blue-300/40
-                 focus:outline-none focus:border-blue-400/50
-                 focus:ring-2 focus:ring-blue-500/30
-                 transition"
-              />
-            </div>
-
+      {/* Filter tabs */}
+      <section className="container mx-auto px-4 md:px-6 mt-8">
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
+          {filters.map((f) => (
             <button
-              className="btn-control flex items-center justify-center
-               w-full sm:w-auto px-4 py-2.5
-               rounded-xl border border-blue-500/30
-               bg-blue-600/20 hover:bg-blue-600/40
-               text-blue-300
-               transition-all duration-300"
+              key={f}
+              onClick={() => setActiveFilter(f)}
+              className={cn(
+                "px-4 md:px-5 py-2 rounded-full text-xs md:text-sm font-semibold tracking-wide transition-all",
+                activeFilter === f
+                  ? "bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-lg shadow-amber-600/30"
+                  : "bg-amber-950/20 text-amber-100/70 border border-amber-500/20 hover:bg-amber-600/20 hover:text-amber-100"
+              )}
             >
-              <Filter className="w-4 h-4 mr-2" />
-              Filter
+              {f}
             </button>
-          </motion.div>
-        </motion.div>
+          ))}
+        </div>
+      </section>
 
-        {/* Course Grid */}
+      {/* Course Grid */}
+      <section className="container mx-auto px-4 md:px-6 mt-10">
         <motion.div
           initial="initial"
           animate="animate"
           variants={staggerContainer}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          key={activeFilter}
         >
-          {courses.map((course) => (
+          {filteredCourses.map((course) => (
             <motion.div
               key={course.id}
               variants={fadeInUp}
-              whileHover={{ y: -10, scale: 1.03 }}
+              whileHover={{ y: -8 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="glass-card overflow-hidden group relative
-                            border border-blue-500/20
-                            transition-colors duration-300
-                            hover:border-blue-500/50
-                            hover:shadow-2xl hover:shadow-blue-500/20"
+              className="group relative rounded-2xl overflow-hidden border border-amber-500/20 bg-amber-950/10 backdrop-blur-md hover:border-amber-400/60 hover:shadow-2xl hover:shadow-amber-500/20 transition-all"
             >
-              <div className="relative h-48">
-                {/* Tech Overlay for Card */}
-                <div className="tech-overlay" />
+              {/* Image header with title overlay */}
+              <div className="relative h-56 overflow-hidden">
                 <img
-                  src={course.thumbnail}
+                  src="/images/vedic.png"
                   alt={course.title}
-                  className="h-full w-full object-cover
-                    opacity-60 group-hover:opacity-80
-                    group-hover:scale-105
-                    transition-all duration-500"
+                  className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
+                {/* warm overlay tint */}
+                <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-amber-950/20 to-slate-950/80" />
 
-                <div className="absolute top-4 left-4 z-20">
-                  <div className="node-badge">
-                    NODE: {course.id.split("-").pop().toUpperCase().slice(0, 4)}
-                  </div>
+                {/* Top badges */}
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-20">
+                  <span className="px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wider bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow">
+                    {course.tag}
+                  </span>
+                  <span className="px-2.5 py-1 rounded-md text-[10px] font-bold tracking-wider bg-yellow-300 text-slate-950 shadow">
+                    {course.level}
+                  </span>
+                </div>
+
+                {/* Centered title */}
+                <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+                  <h3 className="heading-serif text-3xl md:text-4xl text-amber-50 drop-shadow-lg leading-tight uppercase">
+                    {course.title}
+                  </h3>
+                  <span className="mt-2 text-xs tracking-[0.25em] text-yellow-200/90 uppercase">
+                    ✦ Diploma ✦
+                  </span>
                 </div>
               </div>
 
-              <div className="relative z-20 p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+              {/* Card body */}
+              <div className="bg-amber-950/20 backdrop-blur-sm p-5 border-t border-amber-500/15">
+                <h4 className="text-lg font-semibold text-white text-center mb-2">
                   {course.title}
-                </h3>
-                <p className="text-blue-200/50 text-sm mb-4 line-clamp-2">
+                </h4>
+                <p className="text-sm text-amber-100/60 text-center leading-relaxed mb-5 min-h-[3rem]">
                   {course.description}
                 </p>
-
-                <div className="flex items-center justify-between border-t border-blue-500/20 pt-4">
-                  <div className="text-sm text-blue-200/70">
-                    <span className="text-mono-xs opacity-50 block mb-1">
-                      Instructor
-                    </span>
-                    {course.instructor}
-                  </div>
-                  <div className="text-xl font-mono font-bold text-white">
-                    ₹{course.price}
-                  </div>
-                </div>
-
-                <Link href={`/courses/${course.id}`}>
-                  <Button
-                    className="w-full mt-6
-                        bg-blue-600/20
-                        hover:bg-blue-600/40
-                        hover:shadow-lg hover:shadow-blue-500/30
-                        text-blue-300
-                        border border-blue-500/30
-                        rounded-xl
-                        transition-all duration-300"
-                  >
-                    View Data <ArrowRight className="ml-2 w-4 h-4" />
+                <Link href={`/courses/${course.id}`} className="block">
+                  <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold rounded-xl transition-all">
+                    Course Details
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               </div>
             </motion.div>
           ))}
         </motion.div>
-      </div>
+      </section>
+
+      {/* Lead capture form */}
+      <section className="container mx-auto px-4 md:px-6 mt-24">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="heading-serif text-2xl md:text-4xl text-white mb-3">
+              Transform Your Life with{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400">
+                Sacred Knowledge
+              </span>{" "}
+              at HIOS
+            </h2>
+            <p className="text-amber-100/60 text-sm md:text-base">
+              Fill in your details and our counsellor will reach out to guide
+              your spiritual journey.
+            </p>
+          </div>
+
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-2xl border border-amber-500/20 bg-amber-950/10 backdrop-blur-md p-6 md:p-8 space-y-5"
+          >
+            <div className="grid md:grid-cols-2 gap-5">
+              <Field
+                label="Name *"
+                name="name"
+                placeholder="Your full name"
+                value={form.name}
+                onChange={handleChange}
+                required
+              />
+              <Field
+                label="Email *"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                value={form.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <Field
+              label="Phone Number *"
+              name="phone"
+              type="tel"
+              placeholder="+91 98765 43210"
+              value={form.phone}
+              onChange={handleChange}
+              required
+            />
+
+            <div className="grid md:grid-cols-3 gap-5">
+              <Field
+                label="Date"
+                name="date"
+                type="date"
+                value={form.date}
+                onChange={handleChange}
+              />
+              <Field
+                label="Country"
+                name="country"
+                placeholder="India"
+                value={form.country}
+                onChange={handleChange}
+              />
+              <Field
+                label="State"
+                name="state"
+                placeholder="Delhi"
+                value={form.state}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label className="text-xs uppercase tracking-wider text-amber-200/70">
+                Message
+              </label>
+              <textarea
+                name="message"
+                rows={4}
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Tell us which course interests you..."
+                className="w-full rounded-xl bg-slate-950/60 border border-amber-500/20 text-amber-50 placeholder-amber-200/30 px-4 py-3 focus:outline-none focus:border-amber-400/60 focus:ring-2 focus:ring-amber-500/30 transition resize-none"
+              />
+            </div>
+
+            <Button
+              type="submit"
+              className="w-full h-12 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold shadow-lg shadow-amber-600/30 transition-all"
+            >
+              Get Course Details
+            </Button>
+          </form>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function Field({ label, name, type = "text", ...rest }) {
+  return (
+    <div className="flex flex-col gap-2">
+      <label
+        htmlFor={name}
+        className="text-xs uppercase tracking-wider text-amber-200/70"
+      >
+        {label}
+      </label>
+      <input
+        id={name}
+        name={name}
+        type={type}
+        {...rest}
+        className="w-full rounded-xl bg-slate-950/60 border border-amber-500/20 text-amber-50 placeholder-amber-200/30 px-4 py-2.5 focus:outline-none focus:border-amber-400/60 focus:ring-2 focus:ring-amber-500/30 transition"
+      />
     </div>
   );
 }

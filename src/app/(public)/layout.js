@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppFab } from "@/components/layout/WhatsAppFab";
 
 export default function PublicLayout({ children }) {
     return (
@@ -19,6 +20,8 @@ export default function PublicLayout({ children }) {
                 </main>
                 <Footer />
             </div>
+
+            <WhatsAppFab />
         </div>
     );
 }
