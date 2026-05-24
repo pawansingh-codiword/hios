@@ -251,15 +251,12 @@ export default function Home() {
                     {course.description}
                   </p>
 
-                  <div className="flex items-center justify-between border-t border-amber-500/20 pt-4">
+                  <div className="border-t border-amber-500/20 pt-4">
                     <div className="text-sm text-amber-100/70">
                       <span className="text-[10px] font-mono tracking-wider opacity-50 block mb-1">
                         Instructor
                       </span>
                       {course.instructor}
-                    </div>
-                    <div className="text-xl font-mono font-bold text-amber-200">
-                      ₹{course.price}
                     </div>
                   </div>
 

@@ -27,14 +27,9 @@ export function CourseCard({ course }) {
                 <p className="text-muted-foreground text-sm line-clamp-2 mb-4">
                     {course.description}
                 </p>
-                <div className="flex items-center justify-between">
-                    <div className="flex flex-col">
-                        <span className="text-xs text-muted-foreground">Instructor</span>
-                        <span className="font-medium text-sm">{course.instructor}</span>
-                    </div>
-                    <div className="font-bold text-lg text-secondary">
-                        ₹{course.price}
-                    </div>
+                <div className="flex flex-col">
+                    <span className="text-xs text-muted-foreground">Instructor</span>
+                    <span className="font-medium text-sm">{course.instructor}</span>
                 </div>
             </div>
             <div className="p-6 pt-0">
