@@ -101,7 +101,7 @@ export default function SadhanaPage() {
                 size="lg"
                 className="w-full sm:w-auto h-14 px-10 rounded-xl text-base bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
               >
-                Register Now @ ₹399
+                Register Now - 199
               </Button>
               <p className="mt-3 flex items-center gap-2 text-sm text-amber-200/80">
                 <Star
@@ -239,7 +239,7 @@ export default function SadhanaPage() {
             className="shrink-0 h-12 md:h-14 px-5 md:px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            Register Now ✦ ₹399/-
+            Register Now - 199
           </Button>
         </div>
       </div>

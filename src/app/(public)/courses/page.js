@@ -27,46 +27,25 @@ const courseList = [
     title: "Tarot Reading",
     level: "MEDIUM",
     tag: "DIPLOMA",
+    image: "/images/tarot.png",
     description:
       "Tarot Card Reading helps you to discover deep insightful readings.",
-  },
-  {
-    id: "palmistry",
-    title: "Palmistry",
-    level: "MEDIUM",
-    tag: "DIPLOMA",
-    description:
-      "Palmistry is the art of reading lines and patterns on the palm to reveal personality and destiny.",
   },
   {
     id: "vedic-astrology",
     title: "Vedic Astrology",
     level: "MASTER",
     tag: "DIPLOMA",
+    image: "/images/Astrology.png",
     description:
       "Navagrahas and planetary positions create destiny — decode the cosmic blueprint.",
-  },
-  {
-    id: "lal-kitab-astrology",
-    title: "Lal Kitab Astrology",
-    level: "MEDIUM",
-    tag: "DIPLOMA",
-    description:
-      "Discover unique astrological remedies and predictions rooted in Lal Kitab tradition.",
-  },
-  {
-    id: "kp-astrology",
-    title: "KP Astrology",
-    level: "MASTER",
-    tag: "DIPLOMA",
-    description:
-      "Krishnamurti Paddhati offers a precise system for event-based prediction.",
   },
   {
     id: "vastu-shastra",
     title: "Vastu Shastra",
     level: "MEDIUM",
     tag: "DIPLOMA",
+    image: "/images/vastu.png",
     description:
       "Align your spaces with the five elements for harmony, health, and prosperity.",
   },
@@ -75,54 +54,25 @@ const courseList = [
     title: "Vedic Numerology",
     level: "BEGINNER",
     tag: "DIPLOMA",
+    image: "/images/Numerology.png",
     description:
       "Reveal the science of numbers and how they shape personal destiny.",
-  },
-  {
-    id: "lo-shu-numerology",
-    title: "Lo Shu Numerology",
-    level: "BEGINNER",
-    tag: "DIPLOMA",
-    description:
-      "The 3×3 grid that decodes karmic patterns and life strengths.",
-  },
-  {
-    id: "reiki-healing",
-    title: "Reiki Healing",
-    level: "BEGINNER",
-    tag: "DIPLOMA",
-    description:
-      "Channel universal energy through your hands for healing and balance.",
   },
   {
     id: "spell-casting-healing",
     title: "Spell Casting & Healing",
     level: "MEDIUM",
     tag: "DIPLOMA",
+    image: "/images/spell.png",
     description:
       "Sacred rituals and intention-based healing from ancient traditions.",
-  },
-  {
-    id: "crystal-healing",
-    title: "Crystal Healing",
-    level: "BEGINNER",
-    tag: "DIPLOMA",
-    description:
-      "Use crystals and gemstones to restore vibrational balance and clarity.",
-  },
-  {
-    id: "sound-healing",
-    title: "Sound Healing",
-    level: "BEGINNER",
-    tag: "DIPLOMA",
-    description:
-      "Tune the body and mind with vibration, mantra, and singing bowls.",
   },
   {
     id: "akashic-records",
     title: "Akashic Records",
     level: "MASTER",
     tag: "DIPLOMA",
+    image: "/images/akashic.png",
     description:
       "Access the cosmic library of your soul's journey across lifetimes.",
   },
@@ -131,6 +81,7 @@ const courseList = [
     title: "Past Life Regression",
     level: "MASTER",
     tag: "DIPLOMA",
+    image: "/images/PastLifeRegrassion.png",
     description:
       "Guided journey into past lives to heal patterns in this lifetime.",
   },
@@ -139,6 +90,7 @@ const courseList = [
     title: "Hypnosis",
     level: "MEDIUM",
     tag: "DIPLOMA",
+    image: "/images/hypnosis.png",
     description:
       "Harness the subconscious mind to change beliefs and behaviours.",
   },
@@ -226,9 +178,9 @@ export default function CoursesPage() {
               {/* Image header with title overlay */}
               <div className="relative h-56 overflow-hidden">
                 <img
-                  src="/images/vedic.png"
+                  src={course.image}
                   alt={course.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
                 {/* warm overlay tint */}
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-amber-950/20 to-slate-950/80" />
