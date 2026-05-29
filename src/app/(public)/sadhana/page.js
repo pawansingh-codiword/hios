@@ -83,7 +83,7 @@ export default function SadhanaPage() {
             </h1>
 
             <p className="text-amber-100/75 text-base md:text-lg leading-relaxed max-w-xl">
-              Join Gurudev Vikrant Jain&apos;s live 2-hour Black Magic Removal
+              Join Guruma Kiran Khullar&apos;s live 2-hour Black Magic Removal
               sadhana class where you will learn how to remove Kala Jaadu, Nazar
               aur Tantra-Badha.
             </p>
@@ -101,7 +101,7 @@ export default function SadhanaPage() {
                 size="lg"
                 className="w-full sm:w-auto h-14 px-10 rounded-xl text-base bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
               >
-                Register Now @ ₹399
+                Register Now @ ₹199
               </Button>
               <p className="mt-3 flex items-center gap-2 text-sm text-amber-200/80">
                 <Star
@@ -146,7 +146,7 @@ export default function SadhanaPage() {
               {/* Faculty image fills the card */}
               <img
                 src="/images/faculty1.png"
-                alt="Gurudev Vikrant Jain"
+                alt="Guruma Kiran Khullar"
                 className="absolute inset-0 w-full h-full object-cover"
               />
 
@@ -194,7 +194,7 @@ export default function SadhanaPage() {
             </span>
           </h2>
           <p className="text-amber-100/60 text-center text-sm md:text-base mb-10 max-w-2xl mx-auto">
-            A 2-hour deep-dive guided live by Gurudev Vikrant Jain.
+            A 2-hour deep-dive guided live by Guruma Kiran Khullar.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4">
@@ -204,7 +204,7 @@ export default function SadhanaPage() {
               "Protective rituals you can perform at home",
               "Ancient Vedic methods of energetic cleansing",
               "How to shield your family, home, and aura",
-              "Live Q&A with Gurudev Vikrant Jain",
+              "Live Q&A with Guruma Kiran Khullar",
             ].map((item) => (
               <div
                 key={item}
@@ -239,7 +239,7 @@ export default function SadhanaPage() {
             className="shrink-0 h-12 md:h-14 px-5 md:px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            Register Now ✦ ₹399/-
+            Register Now ✦ ₹199/-
           </Button>
         </div>
       </div>
