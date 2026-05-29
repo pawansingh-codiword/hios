@@ -305,16 +305,16 @@ export default function AboutPage() {
             <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/40 shadow-2xl shadow-amber-900/40 aspect-[4/5] bg-gradient-to-br from-amber-950 via-orange-950 to-slate-950">
               <img
                 src="/images/faculty1.png"
-                alt="Gurudev Vikrant Jain"
+                alt="Guruma Kiran Khullar"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <p className="text-amber-300 text-xs uppercase tracking-widest font-semibold mb-1">
-                  Founder &amp; Head Acharya
+                  Director &amp; Head Acharya
                 </p>
                 <p className="heading-serif text-amber-50 text-2xl">
-                  Gurudev Vikrant Jain
+                  Guruma Kiran Khullar
                 </p>
               </div>
             </div>
@@ -339,8 +339,8 @@ export default function AboutPage() {
               &rdquo;
             </h2>
             <p className="text-amber-100/75 leading-relaxed">
-              For over 25 years, Gurudev Vikrant Jain has trained sadhaks in
-              Vedic astrology, tantra, and the science of consciousness. A
+              For over 30 years, Guruma Kiaran Khullar has trained sadhaks in
+              Vedic astrology, Hypnosis, and the science of consciousness. A
               published author of seven books on Indian metaphysics, his mission
               is to revive the lost art of self-knowledge through the original
               texts.
