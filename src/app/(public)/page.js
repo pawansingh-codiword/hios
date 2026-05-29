@@ -57,7 +57,7 @@ export default function Home() {
         </div>
 
         {/* Hero content — positioned upper-left so it doesn't overlap the image's centered title */}
-        <div className="relative z-10 container mx-auto px-4 md:px-6 pt-10 md:pt-16 pb-20">
+        <div className="relative z-10 container mx-auto px-4 md:px-6 min-h-[calc(100vh-4rem)] flex flex-col justify-end pt-16 pb-12 md:pb-16">
           <motion.div
             className="max-w-xl space-y-6"
             initial="initial"
