@@ -14,12 +14,12 @@ const navItems = [
     name: "Courses",
     href: "/courses",
     children: [
-      { name: "Tarot Reading", href: "/courses/tarot" },
-      { name: "Astrology", href: "/courses/astrology" },
-      { name: "Past-Life Regression", href: "/courses/past-life" },
-      { name: "Akashic Records", href: "/courses/akashic" },
+      { name: "Tarot Reading", href: "/courses/tarot-reading" },
+      { name: "Vedic Astrology", href: "/courses/vedic-astrology" },
+      { name: "Past-Life Regression", href: "/courses/past-life-regression" },
+      { name: "Akashic Records", href: "/courses/akashic-records" },
       { name: "Hypnosis", href: "/courses/hypnosis" },
-      { name: "Spell Casting & Healing", href: "/courses/spell-casting" },
+      { name: "Spell Casting & Healing", href: "/courses/spell-casting-healing" },
     ],
   },
 

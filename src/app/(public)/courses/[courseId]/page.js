@@ -19,7 +19,7 @@ import {
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-const SITE_URL = "https://hamsainstitute.com";
+const SITE_URL = "https://www.indianoccult.com";
 
 export async function generateStaticParams() {
   return occultCourses.map((c) => ({ courseId: c.id }));

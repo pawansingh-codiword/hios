@@ -11,7 +11,7 @@ export const occultCourses = [
     duration: "12 weeks",
     totalLessons: 24,
     language: "English / Hindi",
-    instructor: "Acharya Neetu Jain",
+    instructor: "Kiran",
     seo: {
       title: "Tarot Reading Diploma — Learn Tarot Card Reading | HIOS",
       description:
@@ -105,7 +105,7 @@ export const occultCourses = [
     duration: "20 weeks",
     totalLessons: 40,
     language: "English / Hindi",
-    instructor: "Acharya Vivek",
+    instructor: "Sathya",
     seo: {
       title: "Vedic Astrology Diploma — Learn Jyotish Online | HIOS",
       description:
@@ -199,7 +199,7 @@ export const occultCourses = [
     duration: "10 weeks",
     totalLessons: 20,
     language: "English / Hindi",
-    instructor: "Acharya Vivek",
+    instructor: "Neha Singh",
     seo: {
       title: "Vastu Shastra Diploma — Learn Vedic Architecture | HIOS",
       description:
@@ -281,7 +281,7 @@ export const occultCourses = [
     duration: "8 weeks",
     totalLessons: 16,
     language: "English / Hindi",
-    instructor: "Acharya Vivek",
+    instructor: "Janvi Tripathi",
     seo: {
       title: "Vedic Numerology Diploma — Learn Numerology Online | HIOS",
       description:
@@ -363,7 +363,7 @@ export const occultCourses = [
     duration: "14 weeks",
     totalLessons: 28,
     language: "English / Hindi",
-    instructor: "Gurudev Vikrant Jain",
+    instructor: "Sathya",
     seo: {
       title: "Spell Casting & Healing Diploma — Sacred Ritual Course | HIOS",
       description:
@@ -453,7 +453,7 @@ export const occultCourses = [
     duration: "16 weeks",
     totalLessons: 32,
     language: "English / Hindi",
-    instructor: "Acharya Rrashie Parashar",
+    instructor: "Neha Singh",
     seo: {
       title: "Akashic Records Diploma — Learn Akashic Reading | HIOS",
       description:
@@ -543,7 +543,7 @@ export const occultCourses = [
     duration: "18 weeks",
     totalLessons: 36,
     language: "English / Hindi",
-    instructor: "Acharya Rrashie Parashar",
+    instructor: "Kiran",
     seo: {
       title: "Past Life Regression Therapy Diploma — Certified PLR | HIOS",
       description:
@@ -633,7 +633,7 @@ export const occultCourses = [
     duration: "12 weeks",
     totalLessons: 24,
     language: "English / Hindi",
-    instructor: "Acharya Rrashie Parashar",
+    instructor: "Sandeep",
     seo: {
       title: "Hypnosis Diploma — Learn Clinical Hypnotherapy | HIOS",
       description:

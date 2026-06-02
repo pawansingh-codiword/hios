@@ -1,6 +1,6 @@
 "use client";
 
-const PHONE = "919930215286";
+const PHONE = "919682930862";
 const MESSAGE = "Hi! I'd like to know more about HIOS courses.";
 
 export function WhatsAppFab() {

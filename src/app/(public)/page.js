@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { courses } from "@/lib/data/courses";
+import { occultCourses } from "@/lib/data/occult-courses";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -230,7 +230,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courses.slice(0, 3).map((course) => (
+            {occultCourses.slice(0, 3).map((course) => (
               <div
                 key={course.id}
                 className="overflow-hidden group relative rounded-2xl bg-amber-950/10 border border-amber-500/20 backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:border-amber-400/60 hover:shadow-2xl hover:shadow-amber-500/20"
@@ -238,13 +238,16 @@ export default function Home() {
                 <div className="relative h-48">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10" />
                   <img
-                    src={course.thumbnail}
+                    src={course.image}
                     alt={course.title}
                     className="h-full w-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                   />
-                  <div className="absolute top-4 left-4 z-20">
-                    <div className="text-[10px] font-mono tracking-wider px-2 py-1 rounded-md bg-amber-950/80 border border-amber-500/40 text-amber-200">
-                      NODE: {course.id.toUpperCase().slice(0, 8)}
+                  <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
+                    <div className="text-[10px] font-bold tracking-wider px-2 py-1 rounded-md bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow">
+                      {course.tag}
+                    </div>
+                    <div className="text-[10px] font-bold tracking-wider px-2 py-1 rounded-md bg-yellow-300 text-slate-950 shadow">
+                      {course.level}
                     </div>
                   </div>
                 </div>
@@ -266,9 +269,11 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <Button className="w-full mt-6 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold shadow-md shadow-amber-600/30 rounded-xl transition-all duration-300">
-                    Initialize
-                  </Button>
+                  <Link href={`/courses/${course.id}`} className="block">
+                    <Button className="w-full mt-6 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold shadow-md shadow-amber-600/30 rounded-xl transition-all duration-300">
+                      Initialize
+                    </Button>
+                  </Link>
                 </div>
               </div>
             ))}
