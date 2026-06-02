@@ -26,7 +26,7 @@ export const metadata = {
     "Vastu",
   ],
     icons: {
-    icon: "",
+    icon: "/images/siteLogo.png",
   },
 };
 

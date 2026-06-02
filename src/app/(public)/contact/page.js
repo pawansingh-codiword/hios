@@ -13,8 +13,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-const CONTACT_PHONE = "9555472161";
-const CONTACT_EMAIL = "pwan@gmail.com";
+const CONTACT_PHONE = "9930215286";
+const CONTACT_EMAIL = "indianoccult@gmail.com";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
