@@ -12,8 +12,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Hamsa Institute of Occoured Science",
-  description: "Advanced E-Learning Platform with Partial Payment Access",
+  title: "Hamsa Institute of Occult Science",
+  description:
+    "India's Leading Institute for Numerology, Astrology, Tarot Reading, Akashic Records, Past Life Regression, Reiki Healing and Spiritual Sciences.",
+  keywords: [
+    "Numerology",
+    "Astrology",
+    "Tarot",
+    "Past Life Regression",
+    "Akashic Records",
+    "Occult Science",
+    "Reiki",
+    "Vastu",
+  ],
+    icons: {
+    icon: "",
+  },
 };
 
 export default function RootLayout({ children }) {
