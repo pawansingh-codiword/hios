@@ -43,63 +43,69 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen selection:bg-amber-500 selection:text-slate-950">
       {/* Hero Section with background image */}
-      <section className="relative w-full min-h-[calc(100vh-4rem)] overflow-hidden -mt-16 pt-16">
+      <section className="relative w-full min-h-[60vh] md:min-h-[calc(100vh-4rem)] overflow-hidden -mt-16 pt-16">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/images/hero.png"
             alt="Hamsa Institute of Occult Science"
-            className="w-full h-full object-cover object-center brightness-125 contrast-110 saturate-125"
+            className="w-full h-full object-cover object-top md:object-center brightness-125 contrast-110 saturate-125"
           />
           {/* Warm gradient overlay — keeps content readable, image stays vibrant */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/20 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/80" />
         </div>
 
-        {/* Hero content — positioned upper-left so it doesn't overlap the image's centered title */}
-        <div className="relative z-10 container mx-auto px-4 md:px-6 min-h-[calc(100vh-4rem)] flex flex-col justify-end pt-16 pb-12 md:pb-16">
+        {/* Hero content — centered on small screens, bottom-aligned on md+ */}
+        <div className="relative z-10 container mx-auto px-4 md:px-6 min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center text-center pt-12 pb-12 md:pb-16">
           <motion.div
-            className="max-w-xl space-y-6"
+            className="max-w-3xl w-full flex flex-col items-center space-y-6"
             initial="initial"
             animate="animate"
             variants={staggerContainer}
           >
             <motion.div
               variants={fadeInUp}
-              className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-950/40 backdrop-blur-sm px-4 py-1.5 text-sm text-amber-100"
+              className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-950/40 backdrop-blur-sm px-4 py-1.5 text-xs sm:text-sm text-amber-100"
             >
               <Zap className="w-4 h-4 text-amber-300" />
               <span>World&apos;s No. 1 Occult Education Platform</span>
             </motion.div>
 
-            <motion.div
-              variants={fadeInUp}
-              className="flex flex-wrap items-center gap-4"
-            >
-              <Link href="/courses">
+            <motion.div variants={fadeInUp} className="text-center">
+              <h1 className="heading-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-amber-100 leading-tight drop-shadow-lg break-words">
+                Hamsa Institute of Occult Science
+              </h1>
+              <p className="mt-3 text-sm sm:text-base md:text-lg text-amber-100/80 max-w-lg mx-auto px-2">
+                Learn numerology, astrology, tarot and spiritual sciences online.
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center justify-center gap-3 sm:gap-4 mt-6 w-full max-w-md sm:max-w-none mx-auto">
+              <Link href="/courses" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="h-13 px-7 rounded-full text-base bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
+                  className="w-full sm:w-auto h-12 sm:h-13 px-6 sm:px-7 rounded-full text-sm sm:text-base bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
                 >
                   Explore Our Courses
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
 
-              <Link href="/register">
+              <Link href="/register" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="h-13 px-7 rounded-full text-base bg-yellow-300 hover:bg-yellow-200 text-slate-950 font-semibold shadow-lg shadow-yellow-400/30 transition-all hover:scale-[1.02]"
+                  className="w-full sm:w-auto h-12 sm:h-13 px-6 sm:px-7 rounded-full text-sm sm:text-base bg-yellow-300 hover:bg-yellow-200 text-slate-950 font-semibold shadow-lg shadow-yellow-400/30 transition-all hover:scale-[1.02]"
                 >
                   Get Started
                 </Button>
               </Link>
 
-              <Link href="/contact">
+              <Link href="/contact" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
-                  className="h-13 px-7 rounded-full text-base border border-amber-400/50 bg-slate-950/60 hover:bg-amber-950/60 text-amber-100 backdrop-blur-sm transition-all hover:scale-[1.02]"
+                  className="w-full sm:w-auto h-12 sm:h-13 px-6 sm:px-7 rounded-full text-sm sm:text-base border border-amber-400/50 bg-slate-950/60 hover:bg-amber-950/60 text-amber-100 backdrop-blur-sm transition-all hover:scale-[1.02]"
                 >
                   Contact Us
                 </Button>

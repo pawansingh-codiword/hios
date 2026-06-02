@@ -45,13 +45,13 @@ export function Footer() {
                         <h3 className="font-bold text-amber-200 mb-4 uppercase tracking-widest text-xs">Contact Us</h3>
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li>
-                                <a href="tel:9555472161" className="hover:text-amber-300 transition-colors">
-                                    📞 +91 9555472161
+                                <a href="tel:9930215286" className="hover:text-amber-300 transition-colors">
+                                    📞 +91 9930215286
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:pwan@gmail.com" className="hover:text-amber-300 transition-colors break-all">
-                                    ✉ pwan@gmail.com
+                                <a href="mailto:indianoccult@gmail.com" className="hover:text-amber-300 transition-colors break-all">
+                                    ✉ indianoccult@gmail.com
                                 </a>
                             </li>
                             <li><Link href="/contact" className="hover:text-amber-300 transition-colors">Get in Touch</Link></li>
