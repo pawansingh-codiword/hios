@@ -198,7 +198,7 @@ export default function CoursesPage() {
                 {/* Centered title */}
                 <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
                   <h3 className="heading-serif text-3xl md:text-4xl text-amber-50 drop-shadow-lg leading-tight uppercase">
-                    {course.title}
+                    {/* {course.title} */}
                   </h3>
                   <span className="mt-2 text-xs tracking-[0.25em] text-yellow-200/90 uppercase">
                     ✦ Diploma ✦

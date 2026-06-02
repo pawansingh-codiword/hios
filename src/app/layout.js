@@ -11,21 +11,72 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://www.indianoccult.com";
+
 export const metadata = {
-  title: "Hamsa Institute of Occult Science",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Hamsa Institute of Occult Science | Learn Astrology, Tarot & Numerology",
+    template: "%s | Hamsa Institute of Occult Science",
+  },
   description:
-    "India's Leading Institute for Numerology, Astrology, Tarot Reading, Akashic Records, Past Life Regression, Reiki Healing and Spiritual Sciences.",
+    "India's Leading Institute for Numerology, Astrology, Tarot Reading, Akashic Records, Past Life Regression, Reiki Healing and Spiritual Sciences. Learn online from expert mentors.",
   keywords: [
     "Numerology",
     "Astrology",
-    "Tarot",
+    "Vedic Astrology",
+    "Tarot Reading",
     "Past Life Regression",
     "Akashic Records",
     "Occult Science",
-    "Reiki",
-    "Vastu",
+    "Reiki Healing",
+    "Vastu Shastra",
+    "Hypnosis",
+    "Spell Casting",
+    "Spiritual Sciences",
+    "Online Occult Courses",
   ],
-    icons: {
+  authors: [{ name: "Hamsa Institute of Occult Science" }],
+  creator: "Hamsa Institute of Occult Science",
+  publisher: "Hamsa Institute of Occult Science",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: SITE_URL,
+    siteName: "Hamsa Institute of Occult Science",
+    title: "Hamsa Institute of Occult Science | Learn Astrology, Tarot & Numerology",
+    description:
+      "India's Leading Institute for Numerology, Astrology, Tarot, Akashic Records, Past Life Regression and Spiritual Sciences. Learn online from expert mentors.",
+    images: [
+      {
+        url: "/images/hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Hamsa Institute of Occult Science",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hamsa Institute of Occult Science",
+    description:
+      "India's Leading Institute for Astrology, Tarot, Numerology and Spiritual Sciences. Learn online.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
     icon: "/images/siteLogo.png",
   },
 };

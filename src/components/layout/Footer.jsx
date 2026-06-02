@@ -45,8 +45,8 @@ export function Footer() {
                         <h3 className="font-bold text-amber-200 mb-4 uppercase tracking-widest text-xs">Contact Us</h3>
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li>
-                                <a href="tel:9930215286" className="hover:text-amber-300 transition-colors">
-                                    📞 +91 9930215286
+                                <a href="tel:9682930862" className="hover:text-amber-300 transition-colors">
+                                    📞 +91 9682930862
                                 </a>
                             </li>
                             <li>
