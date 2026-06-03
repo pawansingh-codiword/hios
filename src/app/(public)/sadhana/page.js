@@ -83,15 +83,15 @@ export default function SadhanaPage() {
             </h1>
 
             <p className="text-amber-100/75 text-base md:text-lg leading-relaxed max-w-xl">
-              Join Guruma Kiran Khullar&apos;s live 2-hour Black Magic Removal
-              sadhana class where you will learn how to remove Kala Jaadu, Nazar
+              Join Pd. Raghunandan Aghori&apos;s live 2-hour Tantra Mantra Removal
+              sadhana class where you will learn how to remove tona-totka, Kala Jaadu, Nazar
               aur Tantra-Badha.
             </p>
 
             {/* Info row */}
             <div className="grid grid-cols-3 gap-4 pt-2 border-t border-amber-500/15 pt-6">
               <InfoBlock icon={Clock} label="Duration" value="2 Hours" />
-              <InfoBlock icon={User} label="Guru" value="Vikrant Jain" />
+              <InfoBlock icon={User} label="Guru" value="Pd. Raghunandan Aghori" />
               <InfoBlock icon={Radio} label="Format" value="Live Online" />
             </div>
 
@@ -101,7 +101,7 @@ export default function SadhanaPage() {
                 size="lg"
                 className="w-full sm:w-auto h-14 px-10 rounded-xl text-base bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
               >
-                Register Now - 199
+                Register Now - 511
               </Button>
               <p className="mt-3 flex items-center gap-2 text-sm text-amber-200/80">
                 <Star
@@ -109,7 +109,7 @@ export default function SadhanaPage() {
                   fill="currentColor"
                 />
                 <span>
-                  <span className="font-semibold text-yellow-300">12,000+</span>{" "}
+                  <span className="font-semibold text-yellow-300">15,000+</span>{" "}
                   Sadhaks already joined
                 </span>
               </p>
@@ -135,7 +135,7 @@ export default function SadhanaPage() {
                 </div>
                 <div className="leading-tight">
                   <p className="text-amber-50 text-sm md:text-base font-bold tracking-wide">
-                    BLACK MAGIC REMOVAL SADHANA
+                    NEGATIVE ENERGY REMOVAL SADHANA
                   </p>
                   <p className="text-amber-200/70 text-[10px] md:text-xs">
                     HIOS — Hamsa Institute of Occult Science
@@ -145,8 +145,8 @@ export default function SadhanaPage() {
 
               {/* Faculty image fills the card */}
               <img
-                src="/images/faculty1.png"
-                alt="Guruma Kiran Khullar"
+                src="/images/sadhna.png"
+                alt="Pd. Raghunandan Aghori"
                 className="absolute inset-0 w-full h-full object-cover"
               />
 
@@ -170,10 +170,10 @@ export default function SadhanaPage() {
               {/* Bottom strip */}
               <div className="absolute bottom-0 left-0 right-0 z-20 px-4 md:px-6 py-3 md:py-4 flex items-center justify-between bg-gradient-to-t from-slate-950/90 to-transparent">
                 <div className="px-3 py-1.5 rounded-full bg-slate-950/80 border border-amber-300/40 text-amber-100 text-xs md:text-sm font-semibold backdrop-blur-sm">
-                  ▶ Preview Sadhana
+                  ▶ Preview E-Pooja
                 </div>
                 <p className="text-amber-200 text-sm md:text-base font-semibold heading-serif tracking-wider">
-                  VIKRANT JAIN
+                  Pd. Raghunandan Aghori
                 </p>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function SadhanaPage() {
             </span>
           </h2>
           <p className="text-amber-100/60 text-center text-sm md:text-base mb-10 max-w-2xl mx-auto">
-            A 2-hour deep-dive guided live by Guruma Kiran Khullar.
+            A 2-hour deep-dive guided live by Pd. Raghunandan Aghori.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4">

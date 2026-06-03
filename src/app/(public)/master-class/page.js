@@ -21,7 +21,7 @@ const classes = [
   {
     id: "spell-casting",
     title: "Spell Casting & Healing",
-    instructor: "Neetu Jain",
+    instructor: "Dr. Kiran",
     duration: "60 min",
     description:
       "Discover the ancient art of spell casting and energy healing. Learn intention-based rituals.",
@@ -29,7 +29,7 @@ const classes = [
   {
     id: "tarot-reading",
     title: "Tarot Reading",
-    instructor: "Neetu Jain",
+    instructor: "Dr. Kiran",
     duration: "45 min",
     description:
       "Tarot Card Reading helps you to discover deep, insightful guidance through symbolic cards.",
@@ -37,7 +37,7 @@ const classes = [
   {
     id: "past-life-regression",
     title: "Past Life Regression",
-    instructor: "Rrashie Parashar",
+    instructor: "Guruma Neha",
     duration: "75 min",
     description:
       "Past Life Regression (PLR) helps you heal karmic patterns and reconnect with your soul memory.",
@@ -53,7 +53,7 @@ const classes = [
   {
     id: "akashic-records",
     title: "Akashic Records",
-    instructor: "Rrashie Parashar",
+    instructor: "Guruma Neha",
     duration: "60 min",
     description:
       "Access the cosmic library of your soul's journey across lifetimes and timelines.",
@@ -61,7 +61,7 @@ const classes = [
   {
     id: "numerology",
     title: "Vedic Numerology",
-    instructor: "Acharya Vivek",
+    instructor: "Guruma Janvi",
     duration: "45 min",
     description:
       "Unlock the science of numbers — reveal how your birth date shapes personality and destiny.",
@@ -69,7 +69,7 @@ const classes = [
   {
     id: "reiki-healing",
     title: "Reiki Healing",
-    instructor: "Neetu Jain",
+    instructor: "Guruma Neha",
     duration: "60 min",
     description:
       "Channel universal life-force energy through your hands for deep healing and balance.",
@@ -77,7 +77,7 @@ const classes = [
   {
     id: "crystal-healing",
     title: "Crystal Healing",
-    instructor: "Neetu Jain",
+    instructor: "Guruma Neha",
     duration: "45 min",
     description:
       "Discover how crystals and gemstones restore vibrational balance and emotional clarity.",
@@ -85,7 +85,7 @@ const classes = [
   {
     id: "hypnosis",
     title: "Hypnosis",
-    instructor: "Rrashie Parashar",
+    instructor: "Dr Kiran",
     duration: "60 min",
     description:
       "Harness the subconscious mind to dissolve limiting beliefs and create lasting change.",
