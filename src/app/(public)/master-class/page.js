@@ -198,10 +198,14 @@ export default function MasterClassPage() {
                   <span>{klass.duration}</span>
                 </div>
                 <Link
-                  href={`/master-class/${klass.id}`}
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSenPcmOjpm9S3cKj4MATNN8wBE3yPhNCfTSfkOr8F0nwoHcNQ/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block"
                 >
-                  <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold rounded-xl transition-all">
+                  <Button 
+                  
+                  className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold rounded-xl transition-all">
                     Join Free Class
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>

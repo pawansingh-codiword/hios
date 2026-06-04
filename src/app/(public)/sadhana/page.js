@@ -239,7 +239,7 @@ export default function SadhanaPage() {
             className="shrink-0 h-12 md:h-14 px-5 md:px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
           >
             <Sparkles className="w-4 h-4 mr-2" />
-            Register Now - 511
+            Register Now - 199
           </Button>
         </div>
       </div>
