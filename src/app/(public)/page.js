@@ -13,6 +13,7 @@ import {
   Database,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { EnrollButton } from "@/components/forms/EnrollButton";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -92,14 +93,14 @@ export default function Home() {
                 </Button>
               </Link>
 
-              <Link href="/register" className="w-full sm:w-auto">
-                <Button
+              {/* <Link href="/register" className="w-full sm:w-auto"> */}
+                <EnrollButton
                   size="lg"
                   className="w-full sm:w-auto h-12 sm:h-13 px-6 sm:px-7 rounded-full text-sm sm:text-base bg-yellow-300 hover:bg-yellow-200 text-slate-950 font-semibold shadow-lg shadow-yellow-400/30 transition-all hover:scale-[1.02]"
                 >
                   Get Started
-                </Button>
-              </Link>
+                </EnrollButton>
+              {/* </Link> */}
 
               <Link href="/contact" className="w-full sm:w-auto">
                 <Button
