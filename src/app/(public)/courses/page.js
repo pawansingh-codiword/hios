@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { ContactForm } from "@/components/forms/ContactForm";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -98,28 +99,11 @@ const courseList = [
 
 export default function CoursesPage() {
   const [activeFilter, setActiveFilter] = useState("ALL");
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    country: "",
-    state: "",
-    message: "",
-  });
 
   const filteredCourses =
     activeFilter === "ALL"
       ? courseList
       : courseList.filter((c) => c.level === activeFilter);
-
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Course details requested:", form);
-  };
 
   return (
     <div className="flex flex-col min-h-screen selection:bg-amber-500 selection:text-slate-950 pb-24">
@@ -243,107 +227,13 @@ export default function CoursesPage() {
             </p>
           </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="rounded-2xl border border-amber-500/20 bg-amber-950/10 backdrop-blur-md p-6 md:p-8 space-y-5"
-          >
-            <div className="grid md:grid-cols-2 gap-5">
-              <Field
-                label="Name *"
-                name="name"
-                placeholder="Your full name"
-                value={form.name}
-                onChange={handleChange}
-                required
-              />
-              <Field
-                label="Email *"
-                name="email"
-                type="email"
-                placeholder="you@example.com"
-                value={form.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <Field
-              label="Phone Number *"
-              name="phone"
-              type="tel"
-              placeholder="+91 98765 43210"
-              value={form.phone}
-              onChange={handleChange}
-              required
-            />
-
-            <div className="grid md:grid-cols-3 gap-5">
-              <Field
-                label="Date"
-                name="date"
-                type="date"
-                value={form.date}
-                onChange={handleChange}
-              />
-              <Field
-                label="Country"
-                name="country"
-                placeholder="India"
-                value={form.country}
-                onChange={handleChange}
-              />
-              <Field
-                label="State"
-                name="state"
-                placeholder="Delhi"
-                value={form.state}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="text-xs uppercase tracking-wider text-amber-200/70">
-                Message
-              </label>
-              <textarea
-                name="message"
-                rows={4}
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Tell us which course interests you..."
-                className="w-full rounded-xl bg-slate-950/60 border border-amber-500/20 text-amber-50 placeholder-amber-200/30 px-4 py-3 focus:outline-none focus:border-amber-400/60 focus:ring-2 focus:ring-amber-500/30 transition resize-none"
-              />
-            </div>
-
-            <Button
-              type="submit"
-              className="w-full h-12 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold shadow-lg shadow-amber-600/30 transition-all"
-            >
-              Get Course Details
-            </Button>
-          </form>
+          <ContactForm
+            heading=""
+            subheading=""
+            className="border-amber-500/20"
+          />
         </div>
       </section>
-    </div>
-  );
-}
-
-function Field({ label, name, type = "text", ...rest }) {
-  return (
-    <div className="flex flex-col gap-2">
-      <label
-        htmlFor={name}
-        className="text-xs uppercase tracking-wider text-amber-200/70"
-      >
-        {label}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        {...rest}
-        className="w-full rounded-xl bg-slate-950/60 border border-amber-500/20 text-amber-50 placeholder-amber-200/30 px-4 py-2.5 focus:outline-none focus:border-amber-400/60 focus:ring-2 focus:ring-amber-500/30 transition"
-      />
     </div>
   );
 }

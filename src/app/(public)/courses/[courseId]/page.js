@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ContactForm } from "@/components/forms/ContactForm";
+import { EnrollButton } from "@/components/forms/EnrollButton";
 
 const SITE_URL = "https://www.indianoccult.com";
 
@@ -158,15 +160,14 @@ export default async function CourseDetailPage({ params }) {
             </div>
 
             <div className="pt-3 flex flex-col sm:flex-row gap-3">
-              <Link href={`/learn/${course.id}`} className="group">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto h-12 px-7 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.03] hover:shadow-amber-500/50"
-                >
-                  Enroll Now
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+              <EnrollButton
+                courseName={course.title}
+                size="lg"
+                className="group w-full sm:w-auto h-12 px-7 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.03] hover:shadow-amber-500/50"
+              >
+                Enroll Now
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </EnrollButton>
               <a href="#curriculum">
                 <Button
                   size="lg"
@@ -211,6 +212,32 @@ export default async function CourseDetailPage({ params }) {
             </div>
             <div className="absolute -inset-3 -z-10 bg-gradient-to-br from-amber-500/30 via-orange-500/15 to-transparent rounded-3xl blur-2xl" />
           </div>
+        </div>
+      </section>
+
+      {/* Lead capture — course pre-filled */}
+      <section className="container mx-auto px-4 md:px-6 mt-20">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left — heading / pitch */}
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold mb-3">
+              <Sparkles className="w-4 h-4" />
+              Enquire Now
+            </div>
+            <h2 className="heading-serif text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
+              Get Details for{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400">
+                {course.title}
+              </span>
+            </h2>
+            <p className="text-amber-100/60 text-sm md:text-base mt-4 max-w-md mx-auto lg:mx-0">
+              Fill in your details and our counsellor will reach out about this
+              course — fees, schedule, and how to get started.
+            </p>
+          </div>
+
+          {/* Right — form */}
+          <ContactForm courseName={course.title} heading="" subheading="" />
         </div>
       </section>
 
@@ -393,14 +420,13 @@ export default async function CourseDetailPage({ params }) {
               Join our next cohort and step onto the path of {course.title.toLowerCase()} mastery.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href={`/learn/${course.id}`}>
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto h-13 px-8 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
-                >
-                  Enroll Now
-                </Button>
-              </Link>
+              <EnrollButton
+                courseName={course.title}
+                size="lg"
+                className="w-full sm:w-auto h-13 px-8 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
+              >
+                Enroll Now
+              </EnrollButton>
               <Link href="/contact">
                 <Button
                   size="lg"

@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import {
   Phone,
@@ -8,10 +7,9 @@ import {
   MapPin,
   Clock,
   MessageCircle,
-  Send,
   Sparkles,
 } from "lucide-react";
-import { useState } from "react";
+import { ContactForm } from "@/components/forms/ContactForm";
 
 const CONTACT_PHONE = "9682930862";
 const CONTACT_EMAIL = "indianoccult@gmail.com";
@@ -23,22 +21,6 @@ const fadeInUp = {
 };
 
 export default function ContactPage() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Contact form submitted:", form);
-  };
-
   return (
     <div className="flex flex-col min-h-screen selection:bg-amber-500 selection:text-slate-950 pb-24">
       {/* Header */}
@@ -174,106 +156,16 @@ export default function ContactPage() {
           </motion.div>
 
           {/* Right: contact form */}
-          <motion.form
+          <motion.div
             initial="initial"
             animate="animate"
             variants={fadeInUp}
-            onSubmit={handleSubmit}
-            className="lg:col-span-3 rounded-2xl border border-amber-500/25 bg-amber-950/10 backdrop-blur-md p-6 md:p-8 space-y-5"
+            className="lg:col-span-3"
           >
-            <div>
-              <h2 className="heading-serif text-2xl md:text-3xl text-white mb-2">
-                Send us a Message
-              </h2>
-              <p className="text-amber-100/60 text-sm">
-                Fill the form and our counsellor will reach out shortly.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-5">
-              <Field
-                label="Your Name *"
-                name="name"
-                placeholder="Full name"
-                value={form.name}
-                onChange={handleChange}
-                required
-              />
-              <Field
-                label="Email Address *"
-                name="email"
-                type="email"
-                placeholder="you@example.com"
-                value={form.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-5">
-              <Field
-                label="Phone *"
-                name="phone"
-                type="tel"
-                placeholder="+91 98765 43210"
-                value={form.phone}
-                onChange={handleChange}
-                required
-              />
-              <Field
-                label="Subject"
-                name="subject"
-                placeholder="What can we help with?"
-                value={form.subject}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label className="text-xs uppercase tracking-wider text-amber-200/70 font-semibold">
-                Your Message *
-              </label>
-              <textarea
-                name="message"
-                rows={5}
-                required
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Tell us a little about what you're looking for..."
-                className="w-full rounded-xl bg-slate-950/60 border border-amber-500/20 text-amber-50 placeholder-amber-200/30 px-4 py-3 focus:outline-none focus:border-amber-400/60 focus:ring-2 focus:ring-amber-500/30 transition resize-none"
-              />
-            </div>
-
-            <Button
-              type="submit"
-              className="w-full h-13 px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.01]"
-            >
-              <Send className="w-4 h-4 mr-2" />
-              Send Message
-            </Button>
-          </motion.form>
+            <ContactForm />
+          </motion.div>
         </div>
       </section>
-    </div>
-  );
-}
-
-function Field({ label, name, type = "text", ...rest }) {
-  return (
-    <div className="flex flex-col gap-2">
-      <label
-        htmlFor={name}
-        className="text-xs uppercase tracking-wider text-amber-200/70 font-semibold"
-      >
-        {label}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        {...rest}
-        className="w-full rounded-xl bg-slate-950/60 border border-amber-500/20 text-amber-50 placeholder-amber-200/30 px-4 py-2.5 focus:outline-none focus:border-amber-400/60 focus:ring-2 focus:ring-amber-500/30 transition"
-      />
     </div>
   );
 }
