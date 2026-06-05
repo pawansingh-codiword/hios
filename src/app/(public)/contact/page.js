@@ -12,7 +12,12 @@ import {
 import { ContactForm } from "@/components/forms/ContactForm";
 
 const CONTACT_PHONE = "9682930862";
-const CONTACT_EMAIL = "indianoccult@gmail.com";
+
+const EMAILS = [
+  { label: "General", address: "info@indianoccult.com" },
+  { label: "Enquiries", address: "contact@indianoccult.com" },
+  { label: "Support", address: "support@indianoccult.com" },
+];
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -78,25 +83,34 @@ export default function ContactPage() {
               </div>
             </a>
 
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="group flex items-start gap-4 p-5 rounded-2xl border border-amber-500/25 bg-amber-950/15 backdrop-blur-md hover:border-amber-400/60 hover:shadow-xl hover:shadow-amber-500/15 transition-all"
-            >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-600/40 group-hover:scale-110 transition-transform">
+            <div className="flex items-start gap-4 p-5 rounded-2xl border border-amber-500/25 bg-amber-950/15 backdrop-blur-md">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-600/40">
                 <Mail className="w-5 h-5 text-slate-950" />
               </div>
               <div className="min-w-0">
-                <p className="text-xs uppercase tracking-widest text-amber-300/80 font-semibold mb-1">
+                <p className="text-xs uppercase tracking-widest text-amber-300/80 font-semibold mb-2">
                   Email Us
                 </p>
-                <p className="text-white font-semibold text-lg break-all">
-                  {CONTACT_EMAIL}
-                </p>
-                <p className="text-amber-100/60 text-xs mt-1">
+                <ul className="space-y-1.5">
+                  {EMAILS.map((e) => (
+                    <li key={e.address} className="flex items-baseline gap-2">
+                      <span className="text-[10px] uppercase tracking-wider text-amber-300/60 w-16 shrink-0">
+                        {e.label}
+                      </span>
+                      <a
+                        href={`mailto:${e.address}`}
+                        className="text-white font-medium break-all hover:text-amber-300 transition-colors"
+                      >
+                        {e.address}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-amber-100/60 text-xs mt-2">
                   We reply within 24 hours
                 </p>
               </div>
-            </a>
+            </div>
 
             <a
               href={`https://wa.me/91${CONTACT_PHONE}`}

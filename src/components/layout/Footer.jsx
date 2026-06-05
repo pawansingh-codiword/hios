@@ -26,18 +26,18 @@ export function Footer() {
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li><Link href="/courses" className="hover:text-amber-300 transition-colors">Courses</Link></li>
                             <li><Link href="/about" className="hover:text-amber-300 transition-colors">About Us</Link></li>
-                            <li><Link href="/awards" className="hover:text-amber-300 transition-colors">Awards</Link></li>
-                            <li><Link href="/blog" className="hover:text-amber-300 transition-colors">Blog</Link></li>
+                            {/* <li><Link href="/awards" className="hover:text-amber-300 transition-colors">Awards</Link></li> */}
+                            {/* <li><Link href="/blog" className="hover:text-amber-300 transition-colors">Blog</Link></li> */}
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="font-bold text-amber-200 mb-4 uppercase tracking-widest text-xs">Useful Info</h3>
                         <ul className="space-y-2 text-sm text-gray-300">
-                            <li><Link href="/tools" className="hover:text-amber-300 transition-colors">Tools</Link></li>
+                            {/* <li><Link href="/tools" className="hover:text-amber-300 transition-colors">Tools</Link></li> */}
                             <li><Link href="/sadhana" className="hover:text-amber-300 transition-colors">Sadhana</Link></li>
                             <li><Link href="/master-class" className="hover:text-amber-300 transition-colors">Free Master Class</Link></li>
-                            <li><Link href="/web-stories" className="hover:text-amber-300 transition-colors">Web Stories</Link></li>
+                            {/* <li><Link href="/web-stories" className="hover:text-amber-300 transition-colors">Web Stories</Link></li> */}
                         </ul>
                     </div>
 
@@ -50,8 +50,13 @@ export function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:indianoccult@gmail.com" className="hover:text-amber-300 transition-colors break-all">
-                                    ✉ indianoccult@gmail.com
+                                <a href="mailto:info@indianoccult.com" className="hover:text-amber-300 transition-colors break-all">
+                                    ✉ info@indianoccult.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:support@indianoccult.com" className="hover:text-amber-300 transition-colors break-all">
+                                    ✉ support@indianoccult.com
                                 </a>
                             </li>
                             <li><Link href="/contact" className="hover:text-amber-300 transition-colors">Get in Touch</Link></li>
