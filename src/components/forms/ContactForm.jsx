@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle, Loader2, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^[+\d][\d\s-]{7,}$/;
+
+const WHATSAPP_COMMUNITY = "https://chat.whatsapp.com/CuDZVFVw5My75dvz4Twrzy";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 const ACCESS_KEY = process.env.NEXT_PUBLIC_MAIL_SERVICE_API_KEY;
@@ -128,10 +130,21 @@ export function ContactForm({
         <CheckCircle2 className="w-14 h-14 text-emerald-400 mx-auto mb-4" />
         <h3 className="heading-serif text-2xl text-white mb-2">Message Sent!</h3>
         <p className="text-emerald-100/70">{serverMessage}</p>
+
+        <a
+          href={WHATSAPP_COMMUNITY}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center justify-center gap-2 w-full h-12 rounded-xl bg-[#25D366] hover:bg-[#1ebe57] text-white font-bold shadow-lg shadow-green-900/40 transition-all hover:scale-[1.02]"
+        >
+          <MessageCircle className="w-5 h-5" />
+          Join WhatsApp Community for Booking &amp; Details
+        </a>
+
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-6 text-sm font-semibold text-amber-300 hover:text-amber-200 underline-offset-4 hover:underline"
+          className="mt-4 text-sm font-semibold text-amber-300 hover:text-amber-200 underline-offset-4 hover:underline"
         >
           Send another message
         </button>
