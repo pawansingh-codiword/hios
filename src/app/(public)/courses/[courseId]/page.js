@@ -159,6 +159,30 @@ export default async function CourseDetailPage({ params }) {
               <MetaItem icon={Award} label="Award" value="Diploma" />
             </div>
 
+            {/* Price */}
+            {course.price && (
+              <div className="flex flex-wrap items-end gap-3 pt-4">
+                <span className="heading-serif text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-yellow-200 to-amber-400">
+                  ₹{course.price.toLocaleString("en-IN")}
+                </span>
+                {course.originalPrice && course.originalPrice > course.price && (
+                  <>
+                    <span className="text-amber-100/40 text-lg md:text-xl line-through mb-1">
+                      ₹{course.originalPrice.toLocaleString("en-IN")}
+                    </span>
+                    <span className="mb-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold">
+                      {Math.round(
+                        ((course.originalPrice - course.price) /
+                          course.originalPrice) *
+                          100
+                      )}
+                      % OFF
+                    </span>
+                  </>
+                )}
+              </div>
+            )}
+
             <div className="pt-3 flex flex-col sm:flex-row gap-3">
               <EnrollButton
                 courseName={course.title}
@@ -205,9 +229,19 @@ export default async function CourseDetailPage({ params }) {
                     {course.instructor}
                   </p>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-amber-400/90 flex items-center justify-center shrink-0 shadow-lg shadow-amber-600/40 group-hover:scale-110 transition-transform">
-                  <PlayCircle className="w-6 h-6 text-slate-950" fill="currentColor" />
-                </div>
+                {course.instructor === "Guruma Janvi Tripathi" ? (
+                  <div className="w-12 h-12 rounded-full border-2 border-amber-400/90 overflow-hidden shrink-0 shadow-lg shadow-amber-600/40 group-hover:scale-110 transition-transform">
+                    <img
+                      src="/images/GurumaJanviTripathi.jpeg"
+                      alt={course.instructor}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-amber-400/90 flex items-center justify-center shrink-0 shadow-lg shadow-amber-600/40 group-hover:scale-110 transition-transform">
+                    <PlayCircle className="w-6 h-6 text-slate-950" fill="currentColor" />
+                  </div>
+                )}
               </div>
             </div>
             <div className="absolute -inset-3 -z-10 bg-gradient-to-br from-amber-500/30 via-orange-500/15 to-transparent rounded-3xl blur-2xl" />

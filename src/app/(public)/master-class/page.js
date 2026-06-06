@@ -45,7 +45,7 @@ const classes = [
   {
     id: "vedic-astrology",
     title: "Vedic Astrology",
-    instructor: "Acharya Vivek",
+    instructor: "Guruma Janvi Tripathi",
     duration: "60 min",
     description:
       "Decode the planetary blueprint of your life and learn how the cosmos shapes destiny.",
@@ -61,7 +61,7 @@ const classes = [
   {
     id: "numerology",
     title: "Vedic Numerology",
-    instructor: "Guruma Janvi",
+    instructor: "Guruma Janvi Tripathi",
     duration: "45 min",
     description:
       "Unlock the science of numbers — reveal how your birth date shapes personality and destiny.",
@@ -171,7 +171,11 @@ export default function MasterClassPage() {
 
                 {/* Faculty image — right aligned */}
                 <img
-                  src="/images/faculty1.png"
+                  src={
+                    klass.instructor === "Guruma Janvi Tripathi"
+                      ? "/images/GurumaJanviTripathi.jpeg"
+                      : "/images/faculty1.png"
+                  }
                   alt={klass.instructor}
                   className="absolute right-0 bottom-0 h-[95%] w-auto object-contain object-bottom-right group-hover:scale-105 transition-transform duration-500"
                 />
