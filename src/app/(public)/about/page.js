@@ -352,14 +352,79 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
-                25+ Years Teaching
+                18+ Years Teaching
               </span>
-              <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+              {/* <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
                 7 Books Published
-              </span>
+              </span> */}
               <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
                 Featured Globally
               </span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Senior Faculty — Ajay Kumar (Medium & Master level) */}
+      <section className="container mx-auto px-4 md:px-6 mt-20">
+        <div className="grid lg:grid-cols-5 gap-8 items-center">
+          {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-3 space-y-5 order-2 lg:order-1"
+          >
+            <div className="inline-flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold">
+              <Sparkles className="w-4 h-4" />
+              Senior Faculty
+            </div>
+            <h2 className="heading-serif text-3xl md:text-4xl text-white">
+              Ajay Kumar
+            </h2>
+            <p className="text-amber-300 heading-serif italic text-lg">
+              Senior Astrologer &amp; Mentor — Medium &amp; Master Level Programs
+            </p>
+            <p className="text-amber-100/75 leading-relaxed">
+              With more than 20 years of dedicated practice, Ajay Kumar guides
+              our advanced sadhaks through the Medium and Master level courses —
+              Vedic Astrology, Akashic Records, Past-Life Regression, and more.
+              His depth of experience helps serious learners move from
+              foundational understanding to true professional mastery.
+            </p>
+            <div className="flex flex-wrap gap-3 pt-2">
+              <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+                20+ Years Experience
+              </span>
+              <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+                Medium &amp; Master Level
+              </span>
+              <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+                Certified Astrologer
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2 relative order-1 lg:order-2"
+          >
+            <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/40 shadow-2xl shadow-amber-900/40 aspect-[4/5] bg-gradient-to-br from-amber-950 via-orange-950 to-slate-950">
+              <img
+                src="/images/ajay_kumar_astrologer.png"
+                alt="Ajay Kumar — Senior Astrologer"
+                className="absolute inset-0 w-full h-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <p className="text-amber-300 text-xs uppercase tracking-widest font-semibold mb-1">
+                  Senior Astrologer
+                </p>
+                <p className="heading-serif text-amber-50 text-2xl">Ajay Kumar</p>
+              </div>
             </div>
           </motion.div>
         </div>

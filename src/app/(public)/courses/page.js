@@ -95,6 +95,15 @@ const courseList = [
     description:
       "Harness the subconscious mind to change beliefs and behaviours.",
   },
+  {
+    id: "advanced-predictive-astrology",
+    title: "Advanced Predictive Astrology",
+    level: "MASTER",
+    tag: "DIPLOMA",
+    image: "/images/Astrology.png",
+    description:
+      "Medium-to-Master level mastery of prediction, KP system & professional practice — guided by Ajay Kumar.",
+  },
 ];
 
 export default function CoursesPage() {

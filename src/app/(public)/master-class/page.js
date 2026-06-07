@@ -90,6 +90,14 @@ const classes = [
     description:
       "Harness the subconscious mind to dissolve limiting beliefs and create lasting change.",
   },
+  {
+    id: "advanced-predictive-astrology",
+    title: "Advanced Predictive Astrology",
+    instructor: "Ajay Kumar",
+    duration: "60 min",
+    description:
+      "A Medium-to-Master level demo with 20+ years experienced astrologer Ajay Kumar — predictive techniques, KP system & professional practice.",
+  },
 ];
 
 export default function MasterClassPage() {
@@ -174,6 +182,8 @@ export default function MasterClassPage() {
                   src={
                     klass.instructor === "Guruma Janvi Tripathi"
                       ? "/images/GurumaJanviTripathi.jpeg"
+                      : klass.instructor === "Ajay Kumar"
+                      ? "/images/ajay_kumar_astrologer.png"
                       : "/images/faculty1.png"
                   }
                   alt={klass.instructor}

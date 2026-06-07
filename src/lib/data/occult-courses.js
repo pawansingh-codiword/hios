@@ -711,6 +711,100 @@ export const occultCourses = [
       },
     ],
   },
+  {
+    id: "advanced-predictive-astrology",
+    title: "Advanced Predictive Astrology",
+    tagline: "From Confident Reader to Professional Astrologer",
+    level: "MASTER",
+    tag: "DIPLOMA",
+    image: "/images/Astrology.png",
+    price: 15999,
+    originalPrice: 21999,
+    duration: "24 weeks",
+    totalLessons: 48,
+    language: "English / Hindi",
+    instructor: "Ajay Kumar",
+    seo: {
+      title: "Advanced Predictive Astrology Course — Master Level | HIOS",
+      description:
+        "Master predictive astrology with 20+ years experienced astrologer Ajay Kumar. Learn KP system, dashas, transits, and professional chart reading. Medium & Master level diploma.",
+      keywords: [
+        "advanced astrology course",
+        "predictive astrology",
+        "KP astrology course",
+        "master level astrology",
+        "professional astrologer training",
+      ],
+    },
+    description:
+      "A Medium-to-Master level program for serious learners — go beyond the basics into precise prediction, KP techniques, and professional client practice.",
+    longDescription:
+      "Guided by senior astrologer Ajay Kumar with over 20 years of practice, this advanced diploma takes Medium and Master level students into the heart of predictive astrology. You will move from confident chart reading to professional-grade forecasting — mastering the KP system, advanced dashas, transits, and divisional charts. By the end, you will be equipped to handle real client consultations with accuracy and confidence.",
+    learningOutcomes: [
+      "Master advanced predictive techniques for precise timing",
+      "Apply the KP (Krishnamurti Paddhati) system to any chart",
+      "Use sub-lords, significators, and ruling planets confidently",
+      "Combine dashas and transits for event prediction",
+      "Read divisional charts for career, marriage, and finance",
+      "Run professional consultations with ethical clarity",
+    ],
+    modules: [
+      {
+        title: "Bridging Medium to Master",
+        lessons: [
+          "Review of chart fundamentals",
+          "Strength & dignity of planets",
+          "Building a predictive mindset",
+        ],
+      },
+      {
+        title: "KP System Deep Dive",
+        lessons: [
+          "Sub-lord theory explained",
+          "Significators & ruling planets",
+          "Cuspal interlinks for prediction",
+        ],
+      },
+      {
+        title: "Advanced Dashas & Transits",
+        lessons: [
+          "Vimshottari refinements",
+          "Conditional dashas",
+          "Transit-triggered events",
+        ],
+      },
+      {
+        title: "Divisional Charts for Life Areas",
+        lessons: [
+          "Dashamsa for career timing",
+          "Navamsa for relationships",
+          "Hora & Chaturthamsa for wealth",
+        ],
+      },
+      {
+        title: "Professional Practice",
+        lessons: [
+          "Structuring a client consultation",
+          "Remedial measures & ethics",
+          "Building your astrology practice",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is this course suitable for beginners?",
+        a: "It is designed for Medium and Master level learners. A basic understanding of charts is recommended; we briefly review fundamentals in Module 1.",
+      },
+      {
+        q: "Who teaches this course?",
+        a: "Senior astrologer Ajay Kumar, with 20+ years of professional experience, guides the entire program.",
+      },
+      {
+        q: "Will I be able to consult clients after this?",
+        a: "Yes — the final module is dedicated to professional consultation, remedies, and building your own practice.",
+      },
+    ],
+  },
 ];
 
 export function getOccultCourseById(id) {

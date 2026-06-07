@@ -14,6 +14,9 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
+const GOOGLE_FORM =
+  "https://docs.google.com/forms/d/e/1FAIpQLSenPcmOjpm9S3cKj4MATNN8wBE3yPhNCfTSfkOr8F0nwoHcNQ/viewform";
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -97,12 +100,19 @@ export default function SadhanaPage() {
 
             {/* Register CTA */}
             <div className="pt-4">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto h-14 px-10 rounded-xl text-base bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
+              <a
+                href={GOOGLE_FORM}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full sm:w-auto"
               >
-                Register Now - 511
-              </Button>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto h-14 px-10 rounded-xl text-base bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
+                >
+                  Register Now - 511
+                </Button>
+              </a>
               <p className="mt-3 flex items-center gap-2 text-sm text-amber-200/80">
                 <Star
                   className="w-4 h-4 text-yellow-300"
@@ -234,13 +244,15 @@ export default function SadhanaPage() {
               </span>
             </p>
           </div>
-          <Button
-            size="lg"
-            className="shrink-0 h-12 md:h-14 px-5 md:px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
-          >
-            <Sparkles className="w-4 h-4 mr-2" />
-            Register Now - 199
-          </Button>
+          <a href={GOOGLE_FORM} target="_blank" rel="noopener noreferrer" className="shrink-0">
+            <Button
+              size="lg"
+              className="h-12 md:h-14 px-5 md:px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
+            >
+              <Sparkles className="w-4 h-4 mr-2" />
+              Register Now - 199
+            </Button>
+          </a>
         </div>
       </div>
 

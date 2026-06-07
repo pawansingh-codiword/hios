@@ -6,7 +6,7 @@ import { LeadModalProvider } from "@/components/forms/LeadModalProvider";
 export default function PublicLayout({ children }) {
     return (
         <LeadModalProvider>
-            <div className="flex flex-col min-h-screen futuristic-bg-container overflow-x-hidden">
+            <div className="flex flex-col min-h-screen futuristic-bg-container overflow-x-clip">
                 {/* Global Background Elements */}
                 <div className="futuristic-bg-fixed">
                     <div className="glow-blue" />
