@@ -6,6 +6,12 @@ import { cn } from "@/lib/utils";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { occultCourses } from "@/lib/data/occult-courses";
+
+const courseChildren = occultCourses.map((c) => ({
+  name: c.title,
+  href: `/courses/${c.id}`,
+}));
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -13,14 +19,7 @@ const navItems = [
   {
     name: "Courses",
     href: "/courses",
-    children: [
-      { name: "Tarot Reading", href: "/courses/tarot-reading" },
-      { name: "Vedic Astrology", href: "/courses/vedic-astrology" },
-      { name: "Past-Life Regression", href: "/courses/past-life-regression" },
-      { name: "Akashic Records", href: "/courses/akashic-records" },
-      { name: "Hypnosis", href: "/courses/hypnosis" },
-      { name: "Spell Casting & Healing", href: "/courses/spell-casting-healing" },
-    ],
+    children: courseChildren,
   },
 
   { name: "Contact Us", href: "/contact" },

@@ -229,19 +229,19 @@ export default async function CourseDetailPage({ params }) {
                     {course.instructor}
                   </p>
                 </div>
-                {course.instructor === "Guruma Janvi Tripathi" ? (
-                  <div className="w-12 h-12 rounded-full border-2 border-amber-400/90 overflow-hidden shrink-0 shadow-lg shadow-amber-600/40 group-hover:scale-110 transition-transform">
-                    <img
-                      src="/images/GurumaJanviTripathi.jpeg"
-                      alt={course.instructor}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-10 h-10 rounded-full bg-amber-400/90 flex items-center justify-center shrink-0 shadow-lg shadow-amber-600/40 group-hover:scale-110 transition-transform">
-                    <PlayCircle className="w-6 h-6 text-slate-950" fill="currentColor" />
-                  </div>
-                )}
+                <div className="w-12 h-12 rounded-full border-2 border-amber-400/90 overflow-hidden shrink-0 shadow-lg shadow-amber-600/40 group-hover:scale-110 transition-transform bg-slate-900">
+                  <img
+                    src={
+                      course.instructor === "Guruma Janvi Tripathi"
+                        ? "/images/GurumaJanviTripathi.jpeg"
+                        : course.instructor === "Ajay Kumar"
+                        ? "/images/ajay_kumar_astrologer.png"
+                        : "/images/faculty1.png"
+                    }
+                    alt={course.instructor}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
             <div className="absolute -inset-3 -z-10 bg-gradient-to-br from-amber-500/30 via-orange-500/15 to-transparent rounded-3xl blur-2xl" />
