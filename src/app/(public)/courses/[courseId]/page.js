@@ -21,7 +21,7 @@ import { notFound } from "next/navigation";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { EnrollButton } from "@/components/forms/EnrollButton";
 
-const SITE_URL = "https://www.indianoccult.com";
+const SITE_URL = "https://indianoccult.com";
 
 export async function generateStaticParams() {
   return occultCourses.map((c) => ({ courseId: c.id }));
