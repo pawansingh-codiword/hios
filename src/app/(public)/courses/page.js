@@ -104,6 +104,15 @@ const courseList = [
     description:
       "Medium-to-Master level mastery of prediction, KP system & professional practice — guided by Ajay Kumar.",
   },
+  {
+    id: "palmistry",
+    title: "Palmistry",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    image: "/images/palmistory.png",
+    description:
+      "Read destiny in the hands — lines, mounts & signs. Guided by Guruma Janvi Tripathi.",
+  },
 ];
 
 export default function CoursesPage() {

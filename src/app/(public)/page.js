@@ -236,7 +236,7 @@ export default function Home() {
                 key={course.id}
                 className="overflow-hidden group relative rounded-2xl bg-amber-950/10 border border-amber-500/20 backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:border-amber-400/60 hover:shadow-2xl hover:shadow-amber-500/20"
               >
-                <div className="relative h-48">
+                <div className="relative h-248">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10" />
                   <img
                     src={course.image}

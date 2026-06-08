@@ -98,6 +98,14 @@ const classes = [
     description:
       "A Medium-to-Master level demo with 20+ years experienced astrologer Ajay Kumar — predictive techniques, KP system & professional practice.",
   },
+  {
+    id: "palmistry",
+    title: "Palmistry",
+    instructor: "Guruma Janvi Tripathi",
+    duration: "45 min",
+    description:
+      "Discover the ancient art of reading hands — lines, mounts, and signs that reveal personality and destiny.",
+  },
 ];
 
 export default function MasterClassPage() {
