@@ -21,7 +21,7 @@ import { notFound } from "next/navigation";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { EnrollButton } from "@/components/forms/EnrollButton";
 
-const SITE_URL = "https://www.indianoccult.com";
+const SITE_URL = "https://indianoccult.com";
 
 export async function generateStaticParams() {
   return occultCourses.map((c) => ({ courseId: c.id }));
@@ -122,7 +122,7 @@ export default async function CourseDetailPage({ params }) {
 
       {/* Hero */}
       <section className="container mx-auto px-4 md:px-6 mt-6">
-        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 items-stretch">
           {/* Left */}
           <div className="space-y-4 md:space-y-5 order-2 lg:order-1">
             <div className="flex flex-wrap items-center gap-2">
@@ -205,13 +205,13 @@ export default async function CourseDetailPage({ params }) {
             </div>
           </div>
 
-          {/* Right — hero image (compact) */}
-          <div className="relative order-1 lg:order-2 mx-auto w-full max-w-md lg:max-w-none">
-            <div className="group relative rounded-2xl overflow-hidden border-2 border-amber-400/40 shadow-2xl shadow-amber-900/40 aspect-[4/3] lg:aspect-square max-h-[420px] bg-gradient-to-br from-amber-950 via-orange-950 to-slate-950">
+          {/* Right — hero image (fills content height) */}
+          <div className="relative order-1 lg:order-2 mx-auto w-full max-w-md lg:max-w-none h-full">
+            <div className="group relative rounded-2xl overflow-hidden border-2 border-amber-400/40 shadow-2xl shadow-amber-900/40 h-full min-h-[420px] lg:min-h-[580px] bg-gradient-to-br from-amber-950 via-orange-950 to-slate-950">
               <img
                 src={course.image}
                 alt={course.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/10 to-transparent" />
 

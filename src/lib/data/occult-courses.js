@@ -805,6 +805,93 @@ export const occultCourses = [
       },
     ],
   },
+  {
+    id: "palmistry",
+    title: "Palmistry",
+    tagline: "Read the Map of Destiny Written in Your Hands",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    image: "/images/palmistory.png",
+    price: 11999,
+    originalPrice: 15999,
+    duration: "10 weeks",
+    totalLessons: 20,
+    language: "English / Hindi",
+    instructor: "Guruma Janvi Tripathi",
+    seo: {
+      title: "Palmistry Course — Learn Hast Rekha Reading Online | HIOS",
+      description:
+        "Master Palmistry (Hast Rekha Shastra) with HIOS — learn to read life, heart, head & fate lines, mounts, and hand shapes for accurate personality and destiny analysis.",
+      keywords: [
+        "palmistry course",
+        "learn palmistry online",
+        "hast rekha shastra",
+        "palm reading diploma",
+        "palmistry certification India",
+      ],
+    },
+    description:
+      "Decode personality, relationships, and destiny through the ancient science of reading the lines, mounts, and shapes of the human hand.",
+    longDescription:
+      "Palmistry, or Hast Rekha Shastra, is one of the oldest divinatory sciences — a complete system for reading character and life events from the hand. Guided by Guruma Janvi Tripathi, this diploma takes you from the basics of hand shapes and finger types to advanced reading of the major and minor lines, mounts, and signs. By the end, you will be able to give confident, ethical readings for yourself and others.",
+    learningOutcomes: [
+      "Identify hand shapes, finger types, and what they reveal",
+      "Read the Life, Heart, Head, and Fate lines accurately",
+      "Interpret the mounts (Jupiter, Saturn, Venus and more)",
+      "Recognise special signs, crosses, and markings",
+      "Combine palmistry with timing for life events",
+      "Conduct ethical, confident personal readings",
+    ],
+    modules: [
+      {
+        title: "Foundations of Palmistry",
+        lessons: [
+          "History of Hast Rekha Shastra",
+          "Hand shapes & elements",
+          "Finger types & thumb analysis",
+        ],
+      },
+      {
+        title: "The Major Lines",
+        lessons: [
+          "Life line & vitality",
+          "Heart line & emotions",
+          "Head line & intellect",
+          "Fate line & career",
+        ],
+      },
+      {
+        title: "Mounts & Their Meanings",
+        lessons: [
+          "Mount of Venus, Jupiter, Saturn",
+          "Sun, Mercury, Mars & Moon mounts",
+          "Balancing mount strengths",
+        ],
+      },
+      {
+        title: "Signs, Timing & Practice",
+        lessons: [
+          "Crosses, stars, islands & grilles",
+          "Timing events on the lines",
+          "Ethics & professional reading",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do I need prior experience?",
+        a: "No. The course starts from absolute basics and gradually builds to advanced reading.",
+      },
+      {
+        q: "Which hand should I read?",
+        a: "We cover both — the dominant hand for present/future and the passive hand for inherited traits.",
+      },
+      {
+        q: "Will I get a certificate?",
+        a: "Yes, an HIOS diploma certificate is awarded on completing all modules and the practical assessment.",
+      },
+    ],
+  },
 ];
 
 export function getOccultCourseById(id) {

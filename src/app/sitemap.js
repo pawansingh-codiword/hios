@@ -1,20 +1,21 @@
-export default function sitemap() {
-  const baseUrl = "https://indianoccult.com";
+import { occultCourses } from "@/lib/data/occult-courses";
 
-  const routes = [
+const baseUrl = "https://indianoccult.com";
+
+export default function sitemap() {
+  const staticRoutes = [
     "",
     "/about",
     "/courses",
-    "/courses/tarot-reading",
-    "/courses/vedic-astrology",
-    "/courses/past-life-regression",
-    "/courses/akashic-records",
-    "/courses/hypnosis",
-    "/courses/spell-casting-healing",
     "/contact",
     "/master-class",
     "/sadhana",
+    "/privacy",
   ];
+
+  const courseRoutes = occultCourses.map((c) => `/courses/${c.id}`);
+
+  const routes = [...staticRoutes, ...courseRoutes];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
