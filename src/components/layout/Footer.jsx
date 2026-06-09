@@ -29,6 +29,9 @@ export function Footer() {
                             {/* <li><Link href="/awards" className="hover:text-amber-300 transition-colors">Awards</Link></li> */}
                             {/* <li><Link href="/blog" className="hover:text-amber-300 transition-colors">Blog</Link></li> */}
                         </ul>
+                        <Link href="/admissions" className="inline-block mt-6 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded transition-colors">
+                            Admissions Form
+                        </Link>
                     </div>
 
                     <div>
@@ -39,6 +42,9 @@ export function Footer() {
                             <li><Link href="/master-class" className="hover:text-amber-300 transition-colors">Free Master Class</Link></li>
                             {/* <li><Link href="/web-stories" className="hover:text-amber-300 transition-colors">Web Stories</Link></li> */}
                         </ul>
+                        <Link href="/register" className="inline-block mt-6 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded transition-colors">
+                         Register Now
+                        </Link>
                     </div>
 
                     <div>
@@ -62,6 +68,10 @@ export function Footer() {
                             <li><Link href="/contact" className="hover:text-amber-300 transition-colors">Get in Touch</Link></li>
                             <li><Link href="/privacy" className="hover:text-amber-300 transition-colors">Privacy</Link></li>
                         </ul>
+
+                        <Link href="/applyjob" className="inline-block mt-6 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded transition-colors">
+                          Apply For Jobs
+                        </Link>
                     </div>
                 </div>
                 <div className="mt-12 pt-8 border-t border-amber-500/15 text-center text-[10px] text-amber-100/40 font-mono tracking-widest">
