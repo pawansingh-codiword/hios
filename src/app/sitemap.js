@@ -10,6 +10,9 @@ export default function sitemap() {
     "/contact",
     "/master-class",
     "/sadhana",
+    "/register",
+    "/applyjob",
+    "/admissions",
     "/privacy",
   ];
 
