@@ -1,6 +1,14 @@
+import { Facebook, Instagram, Linkedin, Youtube, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
+    const socialLinks = [
+  { icon: Facebook, label: "Facebook", link: "https://www.facebook.com/profile.php?id=61590649798423" },
+  { icon: Youtube, label: "YouTube", link: "https://youtu.be/YAcrC0i9-LA" },
+  { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/indiaocc/" },
+  { icon: Linkedin, label: "LinkedIn", link: "https://www.linkedin.com/in/hamsa-institute-785aa2413/" },
+  { icon: MessageCircle, label: "WhatsApp", link: "https://chat.whatsapp.com/CuDZVFVw5My75dvz4Twrzy" },
+];
     return (
         <footer className="border-t border-amber-500/20 bg-slate-950/60 text-gray-200 backdrop-blur-sm">
             <div className="container mx-auto px-4 py-12">
@@ -19,6 +27,24 @@ export function Footer() {
                         <p className="text-sm text-amber-100/60 leading-relaxed">
                             Empowering seekers with ancient occult wisdom — Discover, Learn, Transform.
                         </p>
+
+                        <div className="flex items-center gap-3">
+                        {socialLinks.map((item, i) => {
+                            const Icon = item.icon;
+                            return (
+                            <a
+                                key={i}
+                                href={item.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={item.label}
+                                className="w-9 h-9 flex items-center justify-center rounded-full border border-amber-500/25 bg-amber-950/20 text-gray-300 hover:text-amber-300 hover:border-amber-400/50 transition-colors"
+                            >
+                                <Icon className="w-4 h-4" />
+                            </a>
+                            );
+                        })}
+                        </div>
                     </div>
 
                     <div>

@@ -13,9 +13,7 @@ import {
   Radio,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-
-const GOOGLE_FORM =
-  "https://docs.google.com/forms/d/e/1FAIpQLSenPcmOjpm9S3cKj4MATNN8wBE3yPhNCfTSfkOr8F0nwoHcNQ/viewform";
+import { PaymentForm } from "@/components/forms/PaymentForm";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -24,6 +22,9 @@ const fadeInUp = {
 };
 
 export default function SadhanaPage() {
+  // Amount locked by whichever Register button was pressed (₹511 / ₹199)
+  const [payAmount, setPayAmount] = useState("511");
+
   // Countdown timer (mm:ss)
   const [secondsLeft, setSecondsLeft] = useState(9 * 60 + 30);
   useEffect(() => {
@@ -101,9 +102,8 @@ export default function SadhanaPage() {
             {/* Register CTA */}
             <div className="pt-4">
               <a
-                href={GOOGLE_FORM}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#payment"
+                onClick={() => setPayAmount("511")}
                 className="inline-block w-full sm:w-auto"
               >
                 <Button
@@ -230,6 +230,32 @@ export default function SadhanaPage() {
         </div>
       </section>
 
+      {/* Payment / Registration */}
+      <section id="payment" className="container mx-auto px-4 md:px-6 mt-20 scroll-mt-24">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold mb-3">
+              <Sparkles className="w-4 h-4" />
+              Register &amp; Pay
+            </div>
+            <h2 className="heading-serif text-2xl md:text-4xl text-white">
+              Secure Your{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400">
+                Sadhana Seat
+              </span>
+            </h2>
+            <p className="text-amber-100/60 text-sm md:text-base mt-3 max-w-2xl mx-auto">
+              Pay via UPI and enter your transaction ID to confirm your spot in
+              the live sadhana.
+            </p>
+          </div>
+          <PaymentForm
+            programName="Black Magic Removal Sadhana"
+            lockedAmount={payAmount}
+          />
+        </div>
+      </section>
+
       {/* Sticky bottom register bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-amber-500/30 bg-gradient-to-r from-slate-950 via-amber-950/80 to-slate-950 backdrop-blur-md shadow-2xl shadow-black/60">
         <div className="container mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between gap-3">
@@ -244,7 +270,7 @@ export default function SadhanaPage() {
               </span>
             </p>
           </div>
-          <a href={GOOGLE_FORM} target="_blank" rel="noopener noreferrer" className="shrink-0">
+          <a href="#payment" onClick={() => setPayAmount("199")} className="shrink-0">
             <Button
               size="lg"
               className="h-12 md:h-14 px-5 md:px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
