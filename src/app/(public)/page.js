@@ -93,6 +93,16 @@ export default function Home() {
                 </Button>
               </Link>
 
+              <Link href="/register" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto h-12 sm:h-13 px-6 sm:px-7 rounded-full text-sm sm:text-base border border-amber-400/50 bg-slate-950/60 hover:bg-amber-950/60 text-amber-100 backdrop-blur-sm transition-all hover:scale-[1.02]"
+                >
+                  Register Now
+                </Button>
+              </Link>
+
               {/* <Link href="/register" className="w-full sm:w-auto"> */}
                 <EnrollButton
                   size="lg"
