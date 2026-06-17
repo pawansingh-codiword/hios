@@ -128,7 +128,7 @@ export function ContactForm({
         )}
       >
         <CheckCircle2 className="w-14 h-14 text-emerald-400 mx-auto mb-4" />
-        <h3 className="heading-serif text-2xl text-white mb-2">Message Sent!</h3>
+        <h3 className="heading-serif text-2xl text-white mb-2">Download Request Submitted</h3>
         <p className="text-emerald-100/70">{serverMessage}</p>
 
         <a
@@ -252,7 +252,7 @@ export function ContactForm({
       <Button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full h-12 px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.01] disabled:opacity-70 disabled:hover:scale-100"
+        className="w-full h-12 px-8 cursor-pointer rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.01] disabled:opacity-70 disabled:hover:scale-100"
       >
         {status === "submitting" ? (
           <>
@@ -262,7 +262,7 @@ export function ContactForm({
         ) : (
           <>
             <Send className="w-4 h-4 mr-2" />
-            Send Message
+            Download Curriculum
           </>
         )}
       </Button>
