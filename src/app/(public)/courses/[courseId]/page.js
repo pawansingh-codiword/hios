@@ -192,7 +192,7 @@ export default async function CourseDetailPage({ params }) {
                 Enroll Now
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </EnrollButton>
-              <a href="#curriculum">
+              {/* <a href="#curriculum">
                 <Button
                   size="lg"
                   variant="outline"
@@ -201,7 +201,7 @@ export default async function CourseDetailPage({ params }) {
                   <BookOpen className="w-4 h-4 mr-2" />
                   View Curriculum
                 </Button>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -276,7 +276,7 @@ export default async function CourseDetailPage({ params }) {
       </section>
 
       {/* Learning outcomes */}
-      <section className="container mx-auto px-4 md:px-6 mt-16">
+      {/* <section className="container mx-auto px-4 md:px-6 mt-16">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold mb-3">
             <Sparkles className="w-4 h-4" />
@@ -302,10 +302,10 @@ export default async function CourseDetailPage({ params }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Curriculum — interactive accordion */}
-      <section
+      {/* <section
         id="curriculum"
         className="container mx-auto px-4 md:px-6 mt-20 scroll-mt-24"
       >
@@ -375,7 +375,7 @@ export default async function CourseDetailPage({ params }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why this course */}
       <section className="container mx-auto px-4 md:px-6 mt-20">

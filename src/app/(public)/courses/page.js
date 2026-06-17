@@ -217,7 +217,7 @@ export default function CoursesPage() {
                   {course.description}
                 </p>
                 <Link href={`/courses/${course.id}`} className="block">
-                  <Button className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold rounded-xl transition-all">
+                  <Button className="w-full bg-gradient-to-r cursor-pointer from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-semibold rounded-xl transition-all">
                     Course Details
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>

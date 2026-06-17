@@ -20,7 +20,7 @@ const ACCESS_KEY = process.env.NEXT_PUBLIC_MAIL_SERVICE_API_KEY;
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 const WHATSAPP_COMMUNITY = "https://chat.whatsapp.com/CuDZVFVw5My75dvz4Twrzy";
 
-const UPI_ID = "7522814847@axl";
+const UPI_ID = "anshoverseas.kiran@okhdfcbank";
 const PAYEE_NAME = "Hamsa Institute of Occult Science";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
