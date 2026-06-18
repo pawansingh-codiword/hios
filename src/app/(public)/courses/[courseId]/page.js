@@ -256,10 +256,10 @@ export default async function CourseDetailPage({ params }) {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold mb-3">
               <Sparkles className="w-4 h-4" />
-              Enquire Now
+              Download Curriculum
             </div>
             <h2 className="heading-serif text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
-              Get Details for{" "}
+             Download Curriculum for{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400">
                 {course.title}
               </span>
