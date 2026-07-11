@@ -540,8 +540,8 @@ export const occultCourses = [
     image: "/images/PastLifeRegrassion.png",
     price: 11999,
     originalPrice: 19999,
-    duration: "18 weeks",
-    totalLessons: 36,
+    duration: "14 weeks",
+    totalLessons: 28,
     language: "English / Hindi",
     instructor: "Kiran",
     seo: {

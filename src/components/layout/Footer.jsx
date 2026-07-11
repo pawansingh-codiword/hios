@@ -95,6 +95,11 @@ export function Footer() {
                   About Us
                 </Link>
               </li>
+              <li>
+                <Link href="/occult-science" className="hover:text-amber-300">
+                  Occult Science
+                </Link>
+              </li>
             </ul>
 
             <Link
