@@ -20,6 +20,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { EnrollButton } from "@/components/forms/EnrollButton";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { RelatedLinks } from "@/components/seo/RelatedLinks";
+import { services } from "@/lib/data/services";
 
 const SITE_URL = "https://indianoccult.com";
 
@@ -102,6 +105,17 @@ export default async function CourseDetailPage({ params }) {
     },
   };
 
+  // Internal linking: matching topic page + pillar + other services
+  const topic = services.find((s) => s.coursePath === `/courses/${course.id}`);
+  const relatedTopics = [
+    ...(topic ? [{ name: `${topic.name} — Guide`, href: `/${topic.slug}`, desc: topic.short }] : []),
+    { name: "Occult Science", href: "/occult-science", desc: "Explore all spiritual sciences." },
+    ...services
+      .filter((s) => s.slug !== topic?.slug)
+      .slice(0, 4)
+      .map((s) => ({ name: s.name, href: `/${s.slug}`, desc: s.short })),
+  ];
+
   return (
     <div className="flex flex-col min-h-screen selection:bg-amber-500 selection:text-slate-950 pb-24">
       <script
@@ -109,8 +123,16 @@ export default async function CourseDetailPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Breadcrumb */}
-      <div className="container mx-auto px-4 md:px-6 pt-8">
+      {/* Breadcrumb (nav + schema) */}
+      <Breadcrumbs
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Courses", href: "/courses" },
+          { name: course.title, href: `/courses/${course.id}` },
+        ]}
+      />
+
+      <div className="container mx-auto px-4 md:px-6 pt-3">
         <Link
           href="/courses"
           className="inline-flex items-center gap-2 text-sm text-amber-300 hover:text-yellow-200 transition-colors group"
@@ -405,6 +427,60 @@ export default async function CourseDetailPage({ params }) {
           </div>
         </div>
       </section>
+
+      {/* Certificate showcase */}
+      <section className="container mx-auto px-4 md:px-6 mt-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+          <div className="space-y-4 order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold">
+              <Award className="w-4 h-4" />
+              Your Certificate
+            </div>
+            <h2 className="heading-serif text-3xl md:text-4xl text-white leading-tight">
+              Earn an{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400">
+                ISO-Certified Diploma
+              </span>
+            </h2>
+            <p className="text-amber-100/75 leading-relaxed">
+              On successful completion of <strong>{course.title}</strong>, you
+              receive an official, verifiable Certificate of Completion from
+              Hamsa Institute of Occult Science — recognised and ISO 9001:2015
+              certified. Add it to your résumé, LinkedIn, or professional
+              practice.
+            </p>
+            <ul className="space-y-2.5 pt-2">
+              {[
+                "Personalised with your name & unique certificate ID",
+                "Signed by the founder & your course mentor",
+                "Shareable digital + printable format",
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-2.5 text-amber-100/85 text-sm md:text-base">
+                  <CheckCircle className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="order-1 lg:order-2">
+            <div className="relative rounded-2xl overflow-hidden border-2 border-amber-400/40 shadow-2xl shadow-amber-900/40 group">
+              <img
+                src="/images/certificate.png"
+                alt={`${course.title} — Certificate of Completion, Hamsa Institute of Occult Science`}
+                className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500"
+              />
+              <div className="absolute inset-0 ring-1 ring-inset ring-amber-400/20 rounded-2xl pointer-events-none" />
+            </div>
+            <p className="text-center text-amber-100/40 text-xs mt-3">
+              Sample certificate — issued on course completion
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Related topics — internal linking */}
+      <RelatedLinks heading="Explore Related Topics" links={relatedTopics} />
 
       {/* FAQs */}
       <section className="container mx-auto px-4 md:px-6 mt-20">

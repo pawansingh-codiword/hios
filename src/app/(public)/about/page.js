@@ -328,7 +328,7 @@ export default function AboutPage() {
           >
             <div className="inline-flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold">
               <Quote className="w-4 h-4" />
-              From the Founder
+              From the Co-Founder
             </div>
             <h2 className="heading-serif text-3xl md:text-4xl text-white">
               &ldquo;The cosmos isn&apos;t out there. It&apos;s within you,
@@ -346,13 +346,13 @@ export default function AboutPage() {
               texts.
             </p>
             <p className="text-amber-100/70 leading-relaxed">
-              Under his guidance, HIOS faculty includes Vastu masters, KP
+              Under her guidance, HIOS faculty includes Vastu masters, KP
               astrologers, certified hypnotherapists, past-life regressionists,
               and crystal healers — each chosen for both lineage and integrity.
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
-                18+ Years Teaching
+                25+ Years Teaching
               </span>
               {/* <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
                 7 Books Published
@@ -386,7 +386,7 @@ export default function AboutPage() {
               Senior Astrologer &amp; Mentor — Medium &amp; Master Level Programs
             </p>
             <p className="text-amber-100/75 leading-relaxed">
-              With more than 20 years of dedicated practice, Ajay Kumar guides
+              With more than 30 years of dedicated practice, Ajay Kumar guides
               our advanced sadhaks through the Medium and Master level courses —
               Vedic Astrology, Akashic Records, Past-Life Regression, and more.
               His depth of experience helps serious learners move from
@@ -394,7 +394,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
-                20+ Years Experience
+                25+ Years Experience
               </span>
               <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
                 Medium &amp; Master Level
@@ -429,6 +429,168 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
+<section className="container mx-auto px-4 md:px-6 mt-20">
+  <div className="grid lg:grid-cols-5 gap-8 items-center">
+    {/* Founder Image */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      className="lg:col-span-2 relative"
+    >
+      <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/40 shadow-2xl shadow-amber-900/40 aspect-[4/5] bg-gradient-to-br from-amber-950 via-orange-950 to-slate-950">
+        <img
+          src="/images/GurumaJanviTripathi.jpeg"
+          alt="Guruma Janvi Tripathi — Founder and Head Acharya"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+
+        <div className="absolute bottom-6 left-6 right-6">
+          <p className="text-amber-300 text-xs uppercase tracking-widest font-semibold mb-1">
+            Founder, Vedic Numerologist &amp; Head Acharya
+          </p>
+
+          <p className="heading-serif text-amber-50 text-2xl">
+            Guruma Janvi Tripathi
+          </p>
+        </div>
+      </div>
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="lg:col-span-3 space-y-5"
+    >
+         <div className="inline-flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold">
+        <Sparkles className="w-4 h-4" />
+        <span>senior, Vedic Numerologist &amp; Head Acharya</span>
+      </div>
+
+      <h2 className="heading-serif text-3xl md:text-4xl text-white">
+        Guruma Janvi Tripathi
+      </h2>
+
+      <p className="text-amber-300 heading-serif italic text-lg">
+        Senior Vedic Numerologist, Spiritual Mentor &amp; Numerology Teacher
+      </p>
+
+      <p className="text-amber-100/75 leading-relaxed">
+        For more than 10 years, Guruma Janvi Tripathi has guided students and
+        spiritual seekers in Vedic Numerology, Vedic Astrology, Palmistry and
+        the science of consciousness. Her mission is to preserve and share the
+        wisdom of ancient Indian knowledge in a practical, ethical and
+        accessible way.
+      </p>
+
+      <p className="text-amber-100/70 leading-relaxed">
+        Under her guidance, the HIOS faculty brings together experienced Vastu
+        consultants, KP astrologers, hypnotherapists, past-life regression
+        practitioners, tarot readers and crystal healers, each selected for
+        their knowledge, experience and integrity.
+      </p>
+
+      <div className="flex flex-wrap gap-3 pt-2">
+        <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+          10+ Years of Teaching
+        </span>
+
+        <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+          Founder &amp; Head Acharya
+        </span>
+
+        <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+          Global Recognition
+        </span>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+<section className="container mx-auto px-4 md:px-6 mt-20">
+  <div className="grid lg:grid-cols-5 gap-8 items-center">
+    {/* Reader Content */}
+    <motion.div
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      className="lg:col-span-3 space-y-5 order-2 lg:order-1"
+    >
+      <div className="inline-flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold">
+        <Sparkles className="w-4 h-4" />
+        Senior Angel Card &amp; Tarot Reader
+      </div>
+
+      <h2 className="heading-serif text-3xl md:text-4xl text-white">
+        Ekta Tripathi
+      </h2>
+
+      <p className="text-amber-300 heading-serif italic text-lg">
+        Senior Angel Card Reader, Tarot Reader &amp; Spiritual Mentor
+      </p>
+
+      <p className="text-amber-100/75 leading-relaxed">
+        With more than 10 years of dedicated experience, Ekta Tripathi guides
+        students through Angel Card Reading, Tarot Reading and advanced
+        spiritual practices. Her intuitive approach, practical teaching style
+        and compassionate guidance help learners develop confidence, clarity
+        and a deeper understanding of intuitive sciences.
+      </p>
+
+      <p className="text-amber-100/70 leading-relaxed">
+        She mentors students across advanced-level programs and helps them move
+        from foundational learning to professional practice while maintaining
+        ethical standards, sensitivity and spiritual discipline.
+      </p>
+
+      <div className="flex flex-wrap gap-3 pt-2">
+        <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+          10+ Years of Experience
+        </span>
+
+        <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+          Angel Card Reading
+        </span>
+
+        <span className="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs font-semibold">
+          Tarot Reading
+        </span>
+      </div>
+    </motion.div>
+
+    {/* Reader Image */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      className="lg:col-span-2 relative order-1 lg:order-2"
+    >
+      <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/40 shadow-2xl shadow-amber-900/40 aspect-[4/5] bg-gradient-to-br from-amber-950 via-orange-950 to-slate-950">
+        <img
+          src="/images/ekta.png"
+          alt="Ekta Tripathi — Senior Angel Card and Tarot Reader"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+
+        <div className="absolute bottom-6 left-6 right-6">
+          <p className="text-amber-300 text-xs uppercase tracking-widest font-semibold mb-1">
+            Senior Angel Card &amp; Tarot Reader
+          </p>
+
+          <p className="heading-serif text-amber-50 text-2xl">
+            Ekta Tripathi
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* What sets us apart */}
       <section className="container mx-auto px-4 md:px-6 mt-20">

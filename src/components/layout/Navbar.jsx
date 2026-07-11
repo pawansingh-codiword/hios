@@ -7,15 +7,26 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { occultCourses } from "@/lib/data/occult-courses";
+// import { services } from "@/lib/data/services";
 
 const courseChildren = occultCourses.map((c) => ({
   name: c.title,
   href: `/courses/${c.id}`,
 }));
 
+// const occultChildren = services.map((s) => ({
+//   name: s.name,
+//   href: `/${s.slug}`,
+// }));
+
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
+  // {
+  //   name: "Occult Science",
+  //   href: "/occult-science",
+  //   children: occultChildren,
+  // },
   {
     name: "Courses",
     href: "/courses",
