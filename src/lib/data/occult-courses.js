@@ -892,6 +892,96 @@ export const occultCourses = [
       },
     ],
   },
+  {
+    id: "angel-card-reading",
+    title: "Angel Card Reading",
+    tagline: "Connect with Divine Angelic Guidance",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    image: "/images/AngelCardReaderTarotReader.png",
+    price: 11000,
+    originalPrice: 15000,
+    duration: "10 weeks",
+    totalLessons: 20,
+    language: "English / Hindi",
+    instructor: "Ekta Tripathi",
+    seo: {
+      title: "Angel Card Reading Course — Learn Angel Cards Online | HIOS",
+      description:
+        "Learn Angel Card Reading with HIOS — connect with angelic guidance, interpret angel & oracle cards, and deliver intuitive, uplifting readings. Certified diploma.",
+      keywords: [
+        "angel card reading",
+        "learn angel cards",
+        "oracle card reading",
+        "angel card course",
+        "angel reading certification",
+      ],
+    },
+    description:
+      "Connect with the loving guidance of the angels through Angel Card Reading — a gentle, intuitive practice for clarity, comfort and spiritual direction.",
+    longDescription:
+      "Guided by Senior Angel Card Reader Ekta Tripathi, this diploma takes you from beginner to confident angel card reader. You will learn to attune to angelic energy, understand angel and oracle card meanings, work with multiple spreads, and deliver intuitive readings that bring comfort and clarity. With over 10 years of practice behind the teaching, you will graduate ready to read for yourself and offer professional, ethical readings to others.",
+    learningOutcomes: [
+      "Attune to and connect with angelic guidance",
+      "Interpret angel & oracle card meanings with confidence",
+      "Master multiple angel card spreads",
+      "Develop intuition alongside card symbolism",
+      "Cleanse, charge and care for your deck",
+      "Conduct ethical, compassionate professional readings",
+    ],
+    modules: [
+      {
+        title: "Foundations of Angel Card Reading",
+        lessons: [
+          "Who are the angels & archangels?",
+          "Angel vs oracle vs tarot cards",
+          "Attuning to angelic energy",
+        ],
+      },
+      {
+        title: "Reading the Cards",
+        lessons: [
+          "Angel card meanings",
+          "Building intuition",
+          "Cleansing & charging your deck",
+        ],
+      },
+      {
+        title: "Spreads & Techniques",
+        lessons: [
+          "Single-card daily guidance",
+          "Three-card spreads",
+          "Detailed life-area spreads",
+        ],
+      },
+      {
+        title: "Professional Practice",
+        lessons: [
+          "Structuring a reading session",
+          "Ethics & sensitivity",
+          "Building your practice",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Do I need experience to learn Angel Card Reading?",
+        a: "No — the course starts from the very basics and builds up to confident, professional reading.",
+      },
+      {
+        q: "What is the difference between angel cards and tarot?",
+        a: "Angel cards are gentle, uplifting and focused on guidance and comfort, while tarot is a more detailed 78-card system. Both are intuitive tools.",
+      },
+      {
+        q: "Which deck should I use?",
+        a: "Any angel or oracle deck works well for learning. We guide you on choosing your first deck.",
+      },
+      {
+        q: "Will I get a certificate?",
+        a: "Yes, an HIOS diploma certificate is awarded on completing all modules and the practical assessment.",
+      },
+    ],
+  },
 ];
 
 export function getOccultCourseById(id) {
