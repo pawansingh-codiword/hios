@@ -113,6 +113,15 @@ const courseList = [
     description:
       "Read destiny in the hands — lines, mounts & signs. Guided by Guruma Janvi Tripathi.",
   },
+  {
+    id: "angel-card-reading",
+    title: "Angel Card Reading",
+    level: "MEDIUM",
+    tag: "DIPLOMA",
+    image: "/images/AngelCardReaderTarotReader.png",
+    description:
+      "Connect with angelic guidance through angel & oracle cards. Guided by Ekta Tripathi.",
+  },
 ];
 
 export default function CoursesPage() {

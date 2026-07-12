@@ -47,7 +47,7 @@ export function PaymentForm({ programName = "", lockedAmount = "" }) {
   const [serverMessage, setServerMessage] = useState("");
   const [copied, setCopied] = useState(false);
 
-  // If a button locked the amount (e.g. ₹511 / ₹199), use it; else user-entered.
+  // If a button locked the amount (e.g. ₹211 / ₹199), use it; else user-entered.
   const effectiveAmount = lockedAmount || form.amount;
 
   // UPI link + QR carry the amount so it auto-fills in the UPI app on scan.
@@ -238,7 +238,7 @@ export function PaymentForm({ programName = "", lockedAmount = "" }) {
               </div>
             </div>
           ) : (
-            <Field label="Amount Paid (₹) *" name="amount" type="number" placeholder="e.g. 511" value={form.amount} onChange={handleChange} error={errors.amount} />
+            <Field label="Amount Paid (₹) *" name="amount" type="number" placeholder="e.g. 211" value={form.amount} onChange={handleChange} error={errors.amount} />
           )}
           <Field label="Transaction / UTR ID *" name="transactionId" placeholder="e.g. 4012XXXXXXX" value={form.transactionId} onChange={handleChange} error={errors.transactionId} />
         </div>

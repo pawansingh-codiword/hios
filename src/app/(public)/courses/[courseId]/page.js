@@ -258,6 +258,8 @@ export default async function CourseDetailPage({ params }) {
                         ? "/images/GurumaJanviTripathi.jpeg"
                         : course.instructor === "Ajay Kumar"
                         ? "/images/ajay_kumar_astrologer.png"
+                        : course.instructor === "Ekta Tripathi"
+                        ? "/images/AngelCardReaderTarotReader.png"
                         : "/images/faculty1.png"
                     }
                     alt={course.instructor}

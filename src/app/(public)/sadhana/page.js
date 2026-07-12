@@ -22,8 +22,8 @@ const fadeInUp = {
 };
 
 export default function SadhanaPage() {
-  // Amount locked by whichever Register button was pressed (₹511 / ₹199)
-  const [payAmount, setPayAmount] = useState("511");
+  // Amount locked by whichever Register button was pressed (₹211 / ₹199)
+  const [payAmount, setPayAmount] = useState("211");
 
   // Countdown timer (mm:ss)
   const [secondsLeft, setSecondsLeft] = useState(9 * 60 + 30);
@@ -76,7 +76,7 @@ export default function SadhanaPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-200 text-xs md:text-sm font-semibold uppercase tracking-wider">
               <BadgeCheck className="w-4 h-4" />
-              Live 2-Hour Sadhana
+              Live 1-Hour Sadhana
             </div>
 
             <h1 className="heading-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight">
@@ -87,14 +87,14 @@ export default function SadhanaPage() {
             </h1>
 
             <p className="text-amber-100/75 text-base md:text-lg leading-relaxed max-w-xl">
-              Join Pd. Raghunandan Aghori&apos;s live 2-hour Tantra Mantra Removal
+              Join Pd. Raghunandan Aghori&apos;s live 1-hour Tantra Mantra Removal
               sadhana class where you will learn how to remove tona-totka, Kala Jaadu, Nazar
               aur Tantra-Badha.
             </p>
 
             {/* Info row */}
             <div className="grid grid-cols-3 gap-4 pt-2 border-t border-amber-500/15 pt-6">
-              <InfoBlock icon={Clock} label="Duration" value="2 Hours" />
+              <InfoBlock icon={Clock} label="Duration" value="1 Hours" />
               <InfoBlock icon={User} label="Guru" value="Pd. Raghunandan Aghori" />
               <InfoBlock icon={Radio} label="Format" value="Live Online" />
             </div>
@@ -103,14 +103,14 @@ export default function SadhanaPage() {
             <div className="pt-4">
               <a
                 href="#payment"
-                onClick={() => setPayAmount("511")}
+                onClick={() => setPayAmount("211")}
                 className="inline-block w-full sm:w-auto"
               >
                 <Button
                   size="lg"
                   className="w-full sm:w-auto h-14 px-10 rounded-xl text-base bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
                 >
-                  Register Now - 511
+                  Register Now - 211
                 </Button>
               </a>
               <p className="mt-3 flex items-center gap-2 text-sm text-amber-200/80">

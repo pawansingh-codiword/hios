@@ -16,6 +16,13 @@ export const authors = {
     bio: "With over 20 years of professional practice, Ajay Kumar mentors advanced learners in predictive astrology, the KP system and professional consultation at Hamsa Institute of Occult Science.",
     credentials: ["Vedic Astrology", "KP System", "Predictive Astrology"],
   },
+  "ekta-tripathi": {
+    name: "Ekta Tripathi",
+    role: "Senior Angel Card Reader, Tarot Reader & Spiritual Mentor",
+    image: "/images/AngelCardReaderTarotReader.png",
+    bio: "With more than 10 years of dedicated experience, Ekta Tripathi guides students through Angel Card Reading, Tarot Reading and advanced spiritual practices. Her intuitive approach, practical teaching style and compassionate guidance help learners develop confidence, clarity and a deeper understanding of intuitive sciences.",
+    credentials: ["Angel Card Reading", "Tarot Reading", "Spiritual Mentoring"],
+  },
 };
 
 export const HIOS = {
