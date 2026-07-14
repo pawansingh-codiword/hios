@@ -22,7 +22,7 @@ const fadeInUp = {
 };
 
 export default function SadhanaPage() {
-  // Amount locked by whichever Register button was pressed (₹211 / ₹199)
+  // Amount locked by whichever Register button was pressed (₹211 / ₹49)
   const [payAmount, setPayAmount] = useState("211");
 
   // Countdown timer (mm:ss)
@@ -270,13 +270,13 @@ export default function SadhanaPage() {
               </span>
             </p>
           </div>
-          <a href="#payment" onClick={() => setPayAmount("199")} className="shrink-0">
+          <a href="#payment" onClick={() => setPayAmount("49")} className="shrink-0">
             <Button
               size="lg"
               className="h-12 md:h-14 px-5 md:px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              Register Now - 199
+              Register Now - 49
             </Button>
           </a>
         </div>
