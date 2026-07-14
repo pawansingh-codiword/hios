@@ -105,7 +105,7 @@ export const occultCourses = [
     duration: "20 weeks",
     totalLessons: 40,
     language: "English / Hindi",
-    instructor: "Guruma Janvi Tripathi",
+    instructor: "Ajay Kumar",
     seo: {
       title: "Vedic Astrology Diploma — Learn Jyotish Online | HIOS",
       description:
