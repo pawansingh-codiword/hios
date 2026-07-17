@@ -53,7 +53,7 @@ export default function SadhanaPage() {
     </div>
   );
 
-  return 
+  return (
     <div className="flex flex-col min-h-screen selection:bg-amber-500 selection:text-slate-950 pb-32">
       {/* Top promo marquee */}
       <div className="relative w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 overflow-hidden border-b border-amber-700/30">
@@ -297,7 +297,7 @@ export default function SadhanaPage() {
         }
       `}</style>
     </div>
-  ;
+  )
 }
 
 function InfoBlock({ icon: Icon, label, value }) {
