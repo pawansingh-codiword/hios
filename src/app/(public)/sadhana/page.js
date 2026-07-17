@@ -22,7 +22,7 @@ const fadeInUp = {
 };
 
 export default function SadhanaPage() {
-  // Amount locked by whichever Register button was pressed (₹211 / ₹49)
+  // Amount locked by whichever Register button was pressed (₹211 / ₹151)
   const [payAmount, setPayAmount] = useState("211");
 
   // Countdown timer (mm:ss)
@@ -53,7 +53,7 @@ export default function SadhanaPage() {
     </div>
   );
 
-  return (
+  return 
     <div className="flex flex-col min-h-screen selection:bg-amber-500 selection:text-slate-950 pb-32">
       {/* Top promo marquee */}
       <div className="relative w-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 overflow-hidden border-b border-amber-700/30">
@@ -270,13 +270,13 @@ export default function SadhanaPage() {
               </span>
             </p>
           </div>
-          <a href="#payment" onClick={() => setPayAmount("49")} className="shrink-0">
+          <a href="#payment" onClick={() => setPayAmount("151")} className="shrink-0">
             <Button
               size="lg"
               className="h-12 md:h-14 px-5 md:px-8 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-lg shadow-amber-600/40 transition-all hover:scale-[1.02]"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              Register Now - 49
+              Register Now - 151
             </Button>
           </a>
         </div>
@@ -297,7 +297,7 @@ export default function SadhanaPage() {
         }
       `}</style>
     </div>
-  );
+  ;
 }
 
 function InfoBlock({ icon: Icon, label, value }) {
