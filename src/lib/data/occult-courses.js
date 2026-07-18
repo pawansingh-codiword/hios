@@ -453,7 +453,7 @@ export const occultCourses = [
     duration: "16 weeks",
     totalLessons: 32,
     language: "English / Hindi",
-    instructor: "Neha Singh",
+    instructor: "Dr. Kiran",
     seo: {
       title: "Akashic Records Diploma — Learn Akashic Reading | HIOS",
       description:

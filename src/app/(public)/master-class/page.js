@@ -37,7 +37,7 @@ const classes = [
   {
     id: "past-life-regression",
     title: "Past Life Regression",
-    instructor: "Guruma Neha",
+    instructor: "Dr. Kiran",
     duration: "75 min",
     description:
       "Past Life Regression (PLR) helps you heal karmic patterns and reconnect with your soul memory.",
@@ -53,7 +53,7 @@ const classes = [
   {
     id: "akashic-records",
     title: "Akashic Records",
-    instructor: "Guruma Neha",
+    instructor: "Dr. Kiran",
     duration: "60 min",
     description:
       "Access the cosmic library of your soul's journey across lifetimes and timelines.",
